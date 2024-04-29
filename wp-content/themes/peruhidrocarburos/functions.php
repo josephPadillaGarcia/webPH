@@ -24,6 +24,19 @@ function lista_estilos(){
     wp_enqueue_style('styleph', get_template_directory_uri().'/css/styleph.css');
 }
 
-add_action('wp_enqueue_scripts', 'lista_estilos')
+add_action('wp_enqueue_scripts', 'lista_estilos');
 
-?>
+
+
+
+
+function custom_search_filter($query) {
+    if ($query->is_search && !is_admin()) {
+        $query->set('post_type', 'post');
+        $query->set('s', ''); // Limpiar la consulta para que no busque en el contenido
+        $query->set('title', $_GET['s']); // Realizar la búsqueda basada en el título de la publicación
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'custom_search_filter');
+
