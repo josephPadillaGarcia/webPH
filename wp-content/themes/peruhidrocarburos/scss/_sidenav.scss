@@ -1,0 +1,134 @@
+/*
+    SIDENAV
+    *
+    -----------------------------------------
+    *
+*/
+.sidenav{    
+    height: 100%;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    transition: 0.3s;
+    display: grid;
+    &__content{        
+        background: white;
+        padding: 10%;
+        display: grid;
+        &--back{
+            background: #3d8eb5;
+            a, span{
+                color: #ffffff !important;
+            }
+        }
+    }
+    &__head{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        .head__logo{
+            img{
+
+            }
+        }
+        .head__cerrar{
+            padding: 12px 20px;
+            background: #f7f7f7;
+            cursor: pointer;
+            &--back{
+                background: #0067cd;
+                color: #ffffff;
+            }
+            &--b-radius{
+                border-radius: 50%;
+            }
+            a{
+                font-size: 25px;
+            }
+        }
+    }
+    &__body{
+
+    }
+    &__list{
+        padding: 0 25px;
+        &--center{
+            li{
+                a{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    &__item{
+        text-align: center;
+    }
+    &__links{        
+        padding: 15px 0px;
+        display: flex;
+        color: #3e3e3e;
+        font-weight: 600;
+        font-size: 15px;
+        align-items: center;
+        justify-content: space-between;
+        .text-link{
+            padding-right: 5px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .icono-link{
+            width: 30px !important;
+            display: inline-block;
+            color: #3e3e3e;
+            transform: rotate(-90deg);
+            transition: 0.3s all;
+            font-weight: 600;
+            font-size: 14px;
+            &.active{
+                transform: rotate(0deg);
+            }
+        }
+    }
+    &__dropdown{
+        display: none;
+        background: #f7f7f7;
+        left: 20px;
+        z-index: 10;
+        min-width: 240px;
+        text-align: left;
+        li{
+            a{
+                font-size: 14px;
+                padding-left: 15px;
+            }
+        }
+    }    
+    &.active{
+        transform: translateX(0%);
+    }
+
+    &__footer{
+
+    }
+    .list__redes{
+        margin: 0 5px;
+        background: #c3c3c3; /*puede modificarse*/
+        &--redondo{
+            border-radius: 50px;
+        }
+        a{
+            display: block;
+            padding: 12px;
+            span{
+                font-size: 18px;
+                display: flex;
+                color: #ffffff; /*puede modificarse*/
+            }
+        }
+    }
+}
+
+/*==========================================================*/

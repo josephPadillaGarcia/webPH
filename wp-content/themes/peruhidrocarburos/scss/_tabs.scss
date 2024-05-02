@@ -1,0 +1,209 @@
+
+ /* Tabs menu */
+
+
+.tabs-modal {
+   align-items: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   justify-content: center;
+   grid-gap: 15px;
+   max-width: 430px;
+   margin: auto;
+   .btn {
+      width: 100%;
+      height: 52px;
+      display: grid;
+   }
+}
+  /* Tab Links */
+  
+  .tablinks {
+    img{
+       height: 75px;
+       margin-bottom: 10px;
+    }
+     @media screen and (max-width: 512px) {
+        font-size: 12px;
+     }
+  }
+  
+  /* Tab content line */
+  /*.wrapper_tabcontent:after {
+     content: "";
+     height: 5px;
+     width: 100%;
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     z-index: -2;
+     transition: all 1s ease;
+  }*/
+  
+  
+  /* Text*/
+  .tabcontent{  
+     @media screen and (max-width: 512px) {
+        font-size: 14px;
+        line-height: 26px;
+     }
+  }
+ .single-tabs {
+    padding: 25px 0;
+    border-top: 2px solid #e4e4e4;
+ }
+
+ /*
+   TABS
+   *
+   -----------------------------------------
+   *
+ */
+.tabs{
+
+   &__list{
+      display: flex;
+      margin: 0;
+      padding: 10px 0;
+      z-index: 1;
+      position: relative;
+      &--gap-10{
+         column-gap: 10px;
+      }
+      &--gap-20{
+         column-gap: 20px;
+      }
+   }
+
+   &__item{
+
+   }
+   
+   &__link{
+      cursor: pointer;
+      position: relative;
+      display: block;
+      transition: 0.3s ease;
+      padding: 12px 32px;
+      color: $color_t;
+      font-weight: 600;            
+      &.active{          
+         font-weight: 600;
+         background-color: $color_2;
+         color: white;
+      }
+      &:hover{
+         background: $color_2;
+         color: #ffffff;
+      }
+      &--back-primary{
+         background-color: #F4F4F4;
+      }
+      &--back{
+         background-color: $color_2;
+         color: #ffffff;
+      }
+      &--border-r-3{
+         border-radius: 3px;
+      }
+      &--border-r-5{
+         border-radius: 5px;
+      }
+      &--border-r-50{
+         border-radius: 50px;
+      }
+      &--shadow{
+         -webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+         box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+      }
+      .icono{
+         &--padding-r{
+            padding-right: 8px;
+         }
+         &--top{
+            display: block;
+            text-align: center;
+            padding-bottom: 5px;
+         }
+      }
+      .text-tab{
+         font-weight: 600; 
+      }
+   }    
+
+   &__section{
+      position: relative;
+      opacity: 1;
+      transition: all 1s ease;
+      overflow: hidden;
+      display: none;
+
+      /* modificadores */
+      &--padding{
+         padding: 30px 35px;
+      }
+      &--top{
+         margin-top: -25px;
+      }                 
+      &--border-r{
+         border-radius: 5px;
+      }
+      &--shadow{
+         -webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+         box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+      }
+      &--back{
+         background-color: #ececec;
+      }
+      /*-----------------------------------*/
+      &.active{            
+         transition: all 1s ease;
+         display: block;
+      }
+   }
+   
+   &__body{
+      transition: all 1s ease;
+      animation: fadeEffect 0.6s ease;
+      width: 100%;
+      font-family: "IBM Plex Sans", sans-serif;
+   }
+
+}
+
+ /*====================================*/
+
+
+ /*
+   Efecto de movimiento
+ */
+ @keyframes fadeEffect {
+   from {
+      opacity: 0;
+      margin-left: 30px;
+   }
+   to {
+      opacity: 1;
+      margin-left: 0;
+   }
+}
+
+@keyframes tabEffect {
+   from {
+      top: -40px;
+   }
+   to {
+      top: 0px;
+   }
+}
+
+@keyframes city {
+   from {
+      left: -150px;
+   }
+   to {
+      left: -90px;
+   }
+}
+
+/*====================================*/

@@ -1,0 +1,103 @@
+/*
+*
+    ESTILOS DE FORMULARIO
+*
+*/
+
+.form{
+    /* modificadores */
+    &--centered{
+        width: 50%;
+        margin: auto;
+        border: 1px solid black;
+        padding: 20px 32px;
+    }
+    /*====================*/
+    &__group{
+        grid-gap: 12px;
+        margin-bottom: 8px;
+    }
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        /* modificado */
+        &--requerido{
+            .input-group__input{
+                border: 1px solid #dc3545;
+            }
+            .input-group__validar{
+                color: #dc3545;
+            }
+        }
+        /*=================*/
+        &__label{
+            font-size: 14px;
+            padding-bottom: 5px;
+        }
+        &__input{
+            border: 1px solid #c2c2c2;
+            border-radius: 3px;
+            height: 30px;
+            margin-bottom: 2px;
+            padding: 0 5px;
+            outline: none;
+        }
+        &__validar{
+            font-size: 11px;
+        }
+        &__select{
+            height: 30px;
+            border: 1px solid #c2c2c2;
+            border-radius: 3px;
+            padding: 0 5px;
+            outline: none;
+        }
+        &__text-area{
+            height: 85px;
+            outline: none;            
+            padding: 8px 10px;
+            border: 1px solid #c2c2c2;
+            border-radius: 3px;
+        }
+    }
+    &__checkbox{
+        margin: 18px 0;
+        .checkbox{
+            display: flex;
+            margin-top: 7px;
+            &__input{
+                margin-right: 8px;
+            }
+            &__help{
+                font-size: 14px;
+                a{
+                    color: #4e73bf;
+                    text-decoration: revert;
+                }
+            }
+        }
+    }
+    &__action{
+        margin-top: 18px;
+        button{
+            width: 100%;
+            background-color: #4e73bf;
+            color: #ffffff;
+            border: none;
+            height: 42px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    }
+    &__success{
+        span{
+            display: block;
+            font-size: 14px;
+            border-radius: 3px;
+            background-color: #17a362;
+            color: #ffffff;
+            margin-top: 10px;
+            padding: 12px 18px;
+        }
+    }
+}

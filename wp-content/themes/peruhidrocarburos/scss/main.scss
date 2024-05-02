@@ -1,0 +1,125 @@
+@import 'variables';
+@import 'grid';
+@import 'header';
+@import 'sidenav';
+@import 'acordion';
+@import 'slider';
+@import 'button';
+@import 'editor';
+@import 'banner';
+@import 'form';
+@import 'card';
+@import 'responsive';
+@import 'font';
+
+/* OWL CARROUSEL */
+@import 'owl-carousel/core';
+@import 'owl-carousel/animate';
+@import 'owl-carousel/autoheight';
+@import 'owl-carousel/lazyload';
+@import 'owl-carousel/video';
+@import "owl-carousel/theme.green";
+
+/*===========================================================================================================
+=============================================================================================================*/
+*,div{
+    font-family: 'Neue Montreal', 'Arial';
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+}
+p, a{   
+    font-size: 17px;
+}
+a{
+    transition: 0.3s;
+}
+h1, h2, h3, h4, h5, h6{
+    font-size: 36px;
+}
+hr {
+    background: #f1f0f0;
+    border: 0;
+    margin: 25px 0;
+    height: 2px;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.text-white{
+    color:white!important;
+}
+
+/*
+    Position
+*/
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+}
+/*=================*/
+
+/*
+    Flex
+*/
+.flex{
+    display: flex;
+}
+
+.aling-center{
+    align-items: center;
+}
+
+.justify-star{
+    justify-content: start;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-end{
+    justify-content: end;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+/*=================*/
+
+/* Titulo General */
+
+.title-general{
+    text-align: center;
+    &--naranja{
+        color: $color_2;
+    }
+}
+
+/*==================*/
+
+/*=======================
+Section - Nuestros Servicios
+=======================*/
+
+.section-servicios{
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    .title-general h2{
+        color: $color_2;
+    }
+}
+
+/*=======================*/

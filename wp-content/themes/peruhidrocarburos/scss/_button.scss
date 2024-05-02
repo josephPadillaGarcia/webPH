@@ -1,0 +1,210 @@
+/*=========================================
+=================BOTONES==================*/
+
+.btn{
+    padding: 10px 25px;
+    display: grid;
+    grid-gap: 14px;
+    max-height: 48px;
+    align-items: center;
+    background: $color_1;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.3s;
+    justify-content: center;
+    justify-items: center;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    border-radius: 53px;
+    border: 2px solid $color_1;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    transition: 0.2s;
+    img{     
+        width: 30px;
+        margin: 0!important;
+    }
+
+    &:hover{
+        background: $color_2;
+        border: 2px solid $color_2;
+        box-shadow: 0 0 0 white;
+        i {
+            font-weight: 500;
+            font-size: 1.28rem;
+        }
+    }
+ 
+    
+    &.btn1{
+        background: none;
+        color: $color_2;
+    }
+    &.btn1-white{
+        background: white;
+        color: $color_1;
+        border: 2px solid white;
+    }
+    &.btn2-white{
+        background: none;
+        color: white;
+        border: 2px solid white;
+    }
+    &.active{
+        background-color: $color_2;
+        color: white;
+    }
+    &.btn-icon{
+        grid-template-columns: auto auto;
+        i {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: -4px;
+            margin-left: 13px;
+        }
+    }
+    &.btn-big{
+        height: 54px;
+        max-width: 225px;
+    }
+    
+}
+button:focus { outline: none; }
+.btn-circle {
+    border: 2px solid $color_3;
+    color: $color_3;
+    font-size: 21px;
+    width: 54px;
+    height: 54px;
+    display: grid;
+    border-radius: 50%;
+    align-items: center;
+    justify-items: center;
+    transition: 0.3s;
+    &:hover {
+        background: $color_3;
+        color: white;
+        border-color: $color_3;
+    }
+    i{
+        font-weight: 600;
+    }
+    &.blanco {
+        border: 2px solid #ffffff;
+        color: white;
+        font-size: 21px;
+        padding: 13px;
+        background: none;
+        &:hover {
+            background: $color_3;
+            color: white;
+            border-color: $color_3;
+        }
+        i{
+            font-weight: 500;
+        }
+    }
+}
+.btn-list {
+    background: $color_f;
+    height: 56px;
+    width: 56px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 8px;
+}
+
+.text-center .btn {
+    max-width: 320px;
+    margin: auto;
+}
+.btn-filter {
+    width: 100%;
+    height: 48px;
+}
+.btn-short {
+    max-width: 168px;
+}
+.btn-usuario {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 57px auto;
+    align-content: center;
+    padding: 8px;
+    padding-right: 22px;
+    img {
+        width: 34px!important;
+        border-radius: 50%;
+        display: block;
+    }
+    b {
+        color: white;
+    }
+}
+.dropdown {
+    position: relative;
+}
+@media only screen and (max-width: 1390px) {
+    
+}
+
+/*
+* Estilos boton redes footer JOSPEH PADILLA
+*/
+
+.btn-redes-footer{
+    border: 2px solid $color_2;
+    color: $color_2;
+    &:hover {
+        background: $color_2;
+        color: white;
+        border-color: $color_2;
+    }
+}
+
+
+/*
+BOTONES
+*
+-----------------------------
+*
+*/
+
+.button{
+    padding: 10px 25px;
+    height: 50px;
+    background-color: #bfbfbf;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 100%;
+    /*max-width: 200px;*/
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    outline: none;
+    /* modificadores */
+    &--shadow{
+        box-shadow: 0 2px 2px 0 rgb(0,0,0.14), 0 3px 1px -2px rgb(0,0,0.12), 0 1px 5px 0 rgb(0,0,0.2);
+    }
+    &--b-radius{
+        border-radius: 3px;
+    }
+    &--total width{
+        max-width: 100%;
+    }
+    &--altonormal{
+        height: auto;
+    }
+    /*--------------------*/
+    span{
+        margin: 0 6px;
+    }
+}
+
+

@@ -19,12 +19,21 @@ Agregar estilos
 
 function lista_estilos(){
     //Agregar el archivo estilos
-    wp_enqueue_style('style', get_stylesheet_uri(), wp_get_theme()->get('Version'));
+    //wp_enqueue_style('style', get_stylesheet_uri(), wp_get_theme()->get('Version'));
 
     wp_enqueue_style('styleph', get_template_directory_uri().'/css/styleph.css');
+    wp_enqueue_style('style', get_template_directory_uri().'/css/style.css');
+    wp_enqueue_style('remixicon', get_template_directory_uri().'/css/remixicon.css');
 }
 
 add_action('wp_enqueue_scripts', 'lista_estilos');
+
+
+/* Script personalizado sin dependencias, en cola en el encabezado */
+add_action('wp_enqueue_scripts', 'my_enqueue_custom_js');
+function my_enqueue_custom_js() {
+    wp_enqueue_script('general_script', get_stylesheet_directory_uri().'/js/general.js');
+}
 
 
 

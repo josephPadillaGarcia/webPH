@@ -1,0 +1,64 @@
+/*
+   EDITOR
+   *
+   -----------------------------------------
+   *
+ */
+.editar{
+    p, ul, a{
+        margin-bottom: 12px;
+        display: block;
+    }
+    strong, b{
+        color: #2B2B2B;
+    }
+    a{
+        color: #0067cd;
+        text-decoration: revert;
+    }
+    ul{
+        li{
+            padding-bottom: 10px;
+            font-size: 13px;
+            padding-left: 15px;
+            position: relative;
+            &:before{
+                content: "";
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: #F67706;
+                border-radius: 50%;
+                top: 2px;
+                left: 0;
+            }
+        }
+    }
+    ol{
+        padding-left: 0rem;
+        li{
+            padding-bottom: 10px;
+            color: #F67706;
+            list-style-type: none;
+            counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+            counter-increment: list-0;
+            &:before{                 
+                content: counter(list-0,decimal) ". ";
+            }
+            &.ql-indent-1{
+                margin-left: 2rem;
+                color: #000000;
+                counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+                counter-increment: list-1;
+                text-align: justify;
+                &:before{
+                    content: counter(list-1,lower-alpha) ". ";
+                }
+                &:not(.ql-direction-rtl):before{
+                    margin-left: -1.1em;
+                }
+            }
+        }
+    }
+}
+/*==============================================*/

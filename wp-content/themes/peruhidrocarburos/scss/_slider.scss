@@ -1,0 +1,445 @@
+/*
+Hero slider style
+==========================*/
+
+/*section.slider {
+    position: relative;
+    .slider-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        display: grid;
+        align-content: center;
+        padding-top: 80px;
+        .content {
+            padding: 40px;
+            max-width: 1080px;
+            width: 100%;
+            margin: auto;
+        }
+    }
+}
+
+img.bg-slider {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    filter: drop-shadow(0 -35px 15px rgba(0, 0, 0, 0.35));
+}
+
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    img{
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+}
+.owl-carousel {
+    z-index: 0!important;
+}
+.hero-content {
+    position: absolute;
+    width: 100%;
+    display: grid;
+    align-content: center;
+    z-index: 2;
+    top: 0;
+    padding-bottom: 55px;
+    .texto-slide {
+        color: $color_1;
+        z-index: 2;
+        max-width: 45vw;
+        border-left: 10px solid #e9a800;
+        padding-left: 30px;
+        h1,h2 {
+            font-size: 3.2rem;
+        }
+        p{
+            color: $color_1;
+            font-size: 1.2rem;
+        }
+        a{
+            display: inline-block;
+        }
+    }
+}
+
+
+.hero-slider .owl-item.active h2 {
+    -webkit-animation: 1s 0.8s fadeInLeft both;
+    animation: 1s 0.8s fadeInLeft both;
+}
+.hero-slider .owl-item.active p {
+    -webkit-animation: 1s 1s fadeInLeft both;
+    animation: 1s 1s fadeInLeft both;
+}
+.hero-slider .owl-item.active img {
+    -webkit-animation: 1s 0.5s fadeInUp both;
+    animation: 1s 0.5s fadeInUp both;
+}
+.hero-slider .owl-item.active .slider-btn {
+    -webkit-animation: 1s .3s fadeInUp both;
+    animation: 1s .3s fadeInUp both;
+}
+.hero-slider{
+    .owl-dots {position: absolute;left: 0;right: 0; bottom: 20px;display: none;}
+    .owl-theme .owl-dots .owl-dot span {width: 11px;height: 20px;}
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {background: #ff3547;}
+
+    .owl-theme .owl-nav {
+        display: block!important;
+        button.owl-prev, button.owl-next, button.owl-dot {
+            background: none;
+            position: absolute;
+            color: white;
+            border: none;
+            padding: 0 45px 55px 45px;
+            font-size: 4rem;
+            margin: 0;
+            top: 0;
+            height: 100%;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            span {
+                display: block;
+                margin-top: -10px;
+            }
+            
+        }
+        button.owl-prev{
+            left: 0;
+            &:hover{
+                background: none;
+                -webkit-box-shadow: inset 150px 0px 140px -200px rgba(0,0,0,0.8);
+                -moz-box-shadow: inset 150px 0px 140px -200px rgba(0,0,0,0.8);
+                box-shadow: inset 150px 0px 140px -200px rgba(0,0,0,0.8);
+            }
+        }
+        button.owl-next{
+            right: 0;
+            &:hover{
+                background: none;
+                -webkit-box-shadow: inset -150px 0px 140px -200px rgba(0,0,0,0.8);
+                -moz-box-shadow: inset -150px 0px 140px -200px rgba(0,0,0,0.8);
+                box-shadow: inset -150px 0px 140px -200px rgba(0,0,0,0.8);
+            }
+        }
+    }
+    .owl-theme .owl-nav {
+        margin-top: 0!important;
+    }
+}
+button.owl-prev,button.owl-next {
+    //border: 2px solid #ffffff;
+    padding: 0px 17px 5px 17px !important;
+    color: $color_1 ;
+    font-size: 2.8rem !important;
+    background: transparent !important;
+    height: 60px;
+    width: 60px;    
+    border-radius: 0px !important;
+    //border-radius: 114px!important;
+    //box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    span{
+        display: block;
+        margin-top: -5px;
+    }
+}
+
+.nav-absolute{
+    .owl-nav{
+        margin: 0!important;
+        .owl-prev,.owl-next {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            margin: 0 !important;
+            background: none!important;
+            color: white!important;
+            border: none;
+            padding: 10px 30px;
+        }
+        .owl-prev{
+            left: 0;
+            padding-left: 40px!important;
+        }
+        .owl-next {
+            right: 0;
+            padding-right: 60px!important;
+        }
+    }
+}
+.margin-carousel{
+    .owl-stage-outer {
+        right: -12px;
+    }        
+    .item{
+        margin: 15px;
+        margin-bottom: 20px;
+    }
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $color_3 !important;
+}
+
+
+.carousel-nosotros{
+    .owl-item{
+        .item{
+            transform: scale(0.85);
+            transition: 0.3s;
+            margin: 20px;
+            .card-galeria{
+                position: relative;
+            }
+            &:before, &:after{
+                content: "";
+                position: absolute;
+                width: 150px;
+                height: 100px;
+                background-color: $color_3;
+                transition: 0.8s;
+                z-index: -1;
+            }
+            &:before{
+                top: 0;
+                left: 0;
+            }
+            &:after{
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+    .owl-item.center{
+        .item{
+            transform: scale(1);
+            &:before, &:after{
+                transform: scale(1.25);
+            }
+        }
+    }
+}
+
+.galery-habitacion{
+    .owl-item{
+        .item{
+            margin: 2px;
+            position: relative;
+            &:before, &:after{
+                content: "";
+                position: absolute;
+                width: 150px;
+                height: 100px;
+                background-color: $color_3;
+                transition: 0.8s;
+                z-index: -1;
+            }
+            &:before{
+                top: 0;
+                left: 0;
+            }
+            &:after{
+                bottom: 0;
+                right: 0;
+            }
+            img{
+                width: 100%;
+                display: block;
+                padding: 15px;
+            }
+            
+        }
+        
+    }
+    .owl-dots {
+        width: 100%;
+        position: absolute;
+        bottom: 105px;
+    }
+    
+}
+
+
+
+
+
+@media only screen and (min-width: 720px) {
+    .nav-absolute2{
+        .owl-nav{
+            margin: 0!important;
+            .owl-prev,.owl-next {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                margin: 0 !important;
+                background: none!important;
+                color: $color_2!important;
+                border: none;
+                span{
+                    font-size: 4rem;
+                }
+            }
+            .owl-prev{
+                left: -60px;
+            }
+            .owl-next {
+                right: -60px;
+            }
+        }
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1285px) {
+    .hero-content{
+        .texto-slide {
+            margin-left: 30px;
+            h1,h2,h3{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .hero-content{
+        padding-bottom: 0;
+        .texto-slide {
+            margin-left: 0px;
+            border-left: 8px solid #e9a800;
+            h1,h2,h3{
+                font-size: 2rem;
+            }
+        }
+    }
+    .hero-slider{
+        button.owl-prev, button.owl-next, button.owl-dot {
+            padding-bottom: 0!important;
+        }
+        button.owl-prev{
+            display: none!important;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .hero-content{
+        .texto-slide {
+            border-left: 6px solid #e9a800;
+            h1,h2,h3{
+                font-size: 1.3rem;
+            }
+            p{
+                display: none;
+            }
+        }
+        
+    }
+    .img-slide img.banner-desk {
+        display: none;
+    }
+    .img-slide img.banner-movil {
+        display: block!important;
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .hero-content{
+        .texto-slide {
+            max-width: 60vw;
+            padding-left: 18px;
+            h1,h2,h3{
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+*/
+
+/*
+    OWL CAROUSEL - GENERAL
+    *
+    --------------------------------------
+    *
+*/
+.owl-general{
+    position: relative;
+    &--centrar-navegadores{
+        .owl-nav{
+            position: absolute;
+        }        
+        .owl-nav{
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translate(0px, -50%);
+            justify-content: space-between !important;
+            button{
+                margin: 0 !important;
+            }
+        }
+    }
+    &--bottom-dots{
+        .owl-dots{
+            position: absolute;
+        } 
+        .owl-dots{
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0px);
+        }
+    }
+    .item{
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+    .owl-nav{
+        display: flex;
+        justify-content: center;
+        margin: 0 !important;
+        button{
+            border: none;
+            width: 32px;
+            height: 32px;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background: #196fc0 !important;
+                color: #ffffff !important;
+            }
+            span{
+                display: flex;
+                font-size: 10px;
+            }
+        }
+    }
+    .owl-dots{
+        .owl-dot{
+            padding: 4px;
+            background: initial;
+            span{           
+                margin: 5px 3px !important;
+                background: #979797 !important;
+            }
+            &.active, &:hover{
+                span{
+                    background: #196fc0 !important;
+                }
+            }
+        }
+    }
+}
