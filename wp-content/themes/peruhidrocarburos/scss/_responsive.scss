@@ -68,7 +68,13 @@ input.vs__search {
     .menu-item:not(:hover) > .sub-menu > * {
         visibility: visible !important;
         height: auto !important;
-        color: initial !important;
+        color: #ffffff !important;
+    }
+    .banner__mensaje {
+        width: 100% !important;
+      }
+    .banner__contenido {
+        height: 450px !important;
     }
 }
 @media (max-width: 920px){

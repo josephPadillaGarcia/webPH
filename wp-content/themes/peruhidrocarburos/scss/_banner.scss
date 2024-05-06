@@ -17,7 +17,7 @@
         /* modificadores */
         &--posicion{
             align-items: center;
-            justify-content: center;
+            //justify-content: center;
         }
         &--wholeScreen{
             height: 100vh;
@@ -41,9 +41,12 @@
         /*-------------------*/
     }
     &__mensaje{
-        margin-bottom: 18px; /* se puede modificar */
-        h1{
-            font-size: 2rem; /* se puede modificar */
+        //margin-bottom: 18px; /* se puede modificar */
+        color: #ffffff;
+        width: 520px;
+        h2{
+            color: #ffffff;
+            margin-bottom: 0.8rem;
         }
     }
     &__action{
