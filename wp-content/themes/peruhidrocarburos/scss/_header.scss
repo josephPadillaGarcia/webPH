@@ -31,7 +31,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.85rem 0;
+        padding: 1.5rem 0;
     }
     &__logo{
         &--padding{
@@ -56,7 +56,7 @@
     /* elementos */
     &__list{
         display: flex;
-        grid-gap: 12px;
+        grid-gap: 1.2rem;
         justify-self: right;
         align-items: center;
         height: 100%;
@@ -222,12 +222,5 @@
 }
 /* --------------------------- */
 
-@media only screen and (max-width: 750px) {
-    .movil-menu{
-        display: block !important;
-    }
-    .main-nav__list{
-        display: none !important;
-    }
-}
+
 /*==============================================*/

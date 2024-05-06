@@ -9,15 +9,18 @@
     position: fixed;
     z-index: 200;
     top: 0;
-    left: 0;
-    width: 100%;
-    transform: translateX(100%);
+    right: 0;
+    width: 320px;
+    transform: translateX(320px);
     transition: 0.3s;
     display: grid;
+    color: #fff;
     &__content{        
-        background: white;
+        background-color: $color_1;
         padding: 10%;
-        display: grid;
+        display: flex;
+        flex-flow: column;
+        gap: 3rem;
         &--back{
             background: #3d8eb5;
             a, span{
@@ -35,7 +38,19 @@
             }
         }
         .head__cerrar{
-            padding: 12px 20px;
+            a{
+                font-size: 25px;
+                display: flex;
+                width: 40px;
+                height: 40px;
+                background: #ffffff4f;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6px;
+                color: #fff;
+                cursor: pointer;
+            }
+            /*padding: 12px 20px;
             background: #f7f7f7;
             cursor: pointer;
             &--back{
@@ -47,7 +62,7 @@
             }
             a{
                 font-size: 25px;
-            }
+            }*/
         }
     }
     &__body{

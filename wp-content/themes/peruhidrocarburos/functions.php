@@ -30,10 +30,21 @@ add_action('wp_enqueue_scripts', 'lista_estilos');
 
 
 /* Script personalizado sin dependencias, en cola en el encabezado */
-add_action('wp_enqueue_scripts', 'my_enqueue_custom_js');
-function my_enqueue_custom_js() {
-    wp_enqueue_script('general_script', get_stylesheet_directory_uri().'/js/general.js');
+function agregar_scripts_en_footer() {
+    // Registra el archivo JavaScript
+    wp_register_script('jquery_script', get_template_directory_uri() . '/js/jquery.js', array('jquery'), null, true); // El último parámetro es true para cargar el script en el footer
+
+    // Enqueue the registered script
+    wp_enqueue_script('jquery_script');
+    
+
+    // Registra el archivo JavaScript
+    wp_register_script('general_script', get_template_directory_uri() . '/js/general.js', array('jquery'), null, true); // El último parámetro es true para cargar el script en el footer
+
+    // Enqueue the registered script
+    wp_enqueue_script('general_script');
 }
+add_action('wp_enqueue_scripts', 'agregar_scripts_en_footer');
 
 
 

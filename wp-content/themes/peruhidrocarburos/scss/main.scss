@@ -28,11 +28,15 @@
     box-sizing: border-box;
     margin: 0;
 }
+p{    
+    color: $color_t;
+}
 p, a{   
     font-size: 17px;
 }
 a{
     transition: 0.3s;
+    color: inherit;
 }
 h1, h2, h3, h4, h5, h6{
     font-size: 36px;
@@ -97,6 +101,10 @@ li{
 .space-between{
     justify-content: space-between;
 }
+
+.btn-contacto{
+    display: block;
+}
 /*=================*/
 
 /* Titulo General */
@@ -116,10 +124,92 @@ Section - Nuestros Servicios
 
 .section-servicios{
     margin-top: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 20rem;
     .title-general h2{
         color: $color_2;
     }
 }
 
 /*=======================*/
+
+/* ESTILOS DE MENU */
+
+.main-nav__list{
+
+}
+.menu-item{    
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.menu-item a{    
+  display: block;
+  padding: 15px 20px;
+}
+.sub-menu{    
+  min-width: 100%;
+  position: absolute;
+  background: #ffffff;
+  z-index: 100;
+  width: 180px;
+  border-radius: 6px;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+}
+.sub-menu:after{    
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 101;
+  transition: 0.5s border-top;
+}
+.sub-menu > *{    
+  overflow: hidden;
+  //padding: 5px 10px;
+  background: rgba(0,0,0,0);
+  white-space: nowrap;
+  transition: 
+    0.5s height cubic-bezier(.73,.32,.34,1.5),
+    0.5s padding cubic-bezier(.73,.32,.34,1.5),
+    0.5s margin cubic-bezier(.73,.32,.34,1.5),
+    0.5s 0.2s color,
+    0.2s background-color;
+}
+.sub-menu > *:hover{    
+  background: rgba(0,0,0,0.07);
+}
+.sub-menu {
+    li {
+        a{
+            border-bottom: 1px solid $color_2;
+            padding: 15px 0;
+            margin: 0 1.2rem;
+        }
+    }
+    li:last-child a{
+        border: none;
+    }
+}
+.menu-item:not(:hover) > .sub-menu > * {
+    visibility: hidden;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    color: rgba(25,25,25,0);
+    transition: 
+      0.5s 0.1s height,
+      0.5s 0.1s padding,
+      0.5s 0.1s margin,
+      0.3s color,
+      0.6s visibility;
+    z-index: 99;
+  }
+
+.btn-nav i {
+    font-size: 1.6rem;
+}
+
+/*==============================*/

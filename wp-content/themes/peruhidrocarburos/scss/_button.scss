@@ -1,7 +1,7 @@
 /*=========================================
 =================BOTONES==================*/
 
-.btn{
+/*.btn{
     padding: 10px 25px;
     display: grid;
     grid-gap: 14px;
@@ -155,7 +155,7 @@ button:focus { outline: none; }
 * Estilos boton redes footer JOSPEH PADILLA
 */
 
-.btn-redes-footer{
+/*.btn-redes-footer{
     border: 2px solid $color_2;
     color: $color_2;
     &:hover {
@@ -204,6 +204,18 @@ BOTONES
     /*--------------------*/
     span{
         margin: 0 6px;
+    }
+}
+
+.btn{
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    &--verde{        
+        background: $color_1;
+    }
+    &--naranja{
+        background-color: $color_2;
     }
 }
 

@@ -55,8 +55,8 @@
                         ?>
                     </div>
                         
-                    <a href="#!" class="btn-nav">
-                        <p>Contáctanos</p>
+                    <a href="#!" class="btn-contacto btn btn--verde">
+                        <span>Contáctanos</span>
                     </a> 
                     <ul class="movil-menu" style="display: none;">
                         <li>
@@ -70,10 +70,24 @@
                 <div class="sidenav">
                     <div class="sidenav__content">
                         <div class="sidenav__head">
-                            <div class="head__logo">
-                                <img src="<?php echo site_url(); ?>/wp-content/uploads/2022/06/logo-depsa.png" alt="" class="header__img">
-                            </div>
-                            <div class="head__cerrar head__cerrar--b-radius ">
+                            <?php
+                                $args = array(
+                                    'post_type' => 'informacion_general',
+                                    'posts_per_page' => '0',
+                                );
+                            ?>
+                            <?php $the_query = new WP_Query($args); ?>
+                                <?php if ($the_query->have_posts()) : ?>
+                                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                        <div class="header__logo">
+                                            <?php $imagen = get_field('logo_ph_blanco'); ?>    
+                                            <img src="<?php echo $imagen['url']; ?>" alt="" class="header__img">
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>
+                            <?php endif; ?>
+
+                            <div class="head__cerrar">
                                 <a class="" id="cerrar-side"><i class="close ri-close-line"></i></a>
                             </div>
                         </div>
@@ -101,9 +115,8 @@
 
                             wp_nav_menu($conf);
                             ?>
-
-                            <a href="#!" class="btn-nav">
-                                <p>Contáctanos</p>
+                            <a href="#!" class="btn btn--naranja">
+                                <span>Contáctanos</span>
                             </a> 
                         </div>
                     </div>
