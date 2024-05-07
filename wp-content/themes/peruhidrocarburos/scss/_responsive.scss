@@ -77,48 +77,32 @@ input.vs__search {
         height: 450px !important;
     }
 }
-@media (max-width: 920px){
-    /*.content-filter form.grid-filter-slider {
-        grid-template-columns: 1fr;
-        border-radius: 22px;
-    }
-    .content-filter {
-        border-radius: 22px;
-    }
-    .content-filter form.grid-filter-slider .line-form {
-        height: 0;
-    }
-    .hero-slider img {
-        height: 600px;
-    }
-    .section-inicio-1 .content {
-        padding: 30px 25px;
-    }
-    .section-inicio-1{
-        .card-video {
-            height: 100%;
-            padding: 35px;
+@media (max-width: 840px){
+    .escoger-info{
+        display: flex;
+        gap: 2rem;
+        h2{
+            max-width: none !important;
+            width: 100%;
+            padding-bottom: 1rem !important;
+            text-align: center;
+            &::before{
+                left: 50% !important;
+                width: 10% !important;
+                transform: translateX(-50%);
+            }
         }
-    }*/
-    
+        p{
+            max-width: none !important;
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
 @media (max-width: 690px){
-    /*.menu .btn {
-        padding: 15px 0px;
-    }
-    .menu .btn span {
-        display: none;
-    }
-    footer .pie {
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-    }*/
 }
 
 @media (max-width: 450px){
-   /* .card .grid-datos {
-        display: grid;
-    }*/
 }
 
 

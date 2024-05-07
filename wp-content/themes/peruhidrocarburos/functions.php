@@ -43,6 +43,20 @@ function agregar_scripts_en_footer() {
 
     // Enqueue the registered script
     wp_enqueue_script('general_script');
+
+
+    // Registra el archivo JavaScript
+    wp_register_script('owlcarousel_script', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), null, true); // El último parámetro es true para cargar el script en el footer
+
+    // Enqueue the registered script
+    wp_enqueue_script('owlcarousel_script');
+
+
+    // Registra el archivo JavaScript
+    wp_register_script('wow_script', get_template_directory_uri() . '/js/wow.min.js', array('jquery'), null, true); // El último parámetro es true para cargar el script en el footer
+
+    // Enqueue the registered script
+    wp_enqueue_script('wow_script');
 }
 add_action('wp_enqueue_scripts', 'agregar_scripts_en_footer');
 

@@ -1484,44 +1484,23 @@ input.vs__search {
 
   .banner__contenido {
     height: 450px !important; } }
-@media (max-width: 920px) {
-  /*.content-filter form.grid-filter-slider {
-      grid-template-columns: 1fr;
-      border-radius: 22px;
-  }
-  .content-filter {
-      border-radius: 22px;
-  }
-  .content-filter form.grid-filter-slider .line-form {
-      height: 0;
-  }
-  .hero-slider img {
-      height: 600px;
-  }
-  .section-inicio-1 .content {
-      padding: 30px 25px;
-  }
-  .section-inicio-1{
-      .card-video {
-          height: 100%;
-          padding: 35px;
-      }
-  }*/ }
-@media (max-width: 690px) {
-  /*.menu .btn {
-      padding: 15px 0px;
-  }
-  .menu .btn span {
-      display: none;
-  }
-  footer .pie {
-      grid-template-columns: 1fr;
-      grid-gap: 10px;
-  }*/ }
-@media (max-width: 450px) {
-  /* .card .grid-datos {
-       display: grid;
-   }*/ }
+@media (max-width: 840px) {
+  .escoger-info {
+    display: flex;
+    gap: 2rem; }
+    .escoger-info h2 {
+      max-width: none !important;
+      width: 100%;
+      padding-bottom: 1rem !important;
+      text-align: center; }
+      .escoger-info h2::before {
+        left: 50% !important;
+        width: 10% !important;
+        transform: translateX(-50%); }
+    .escoger-info p {
+      max-width: none !important;
+      width: 100%;
+      text-align: center; } }
 @font-face {
   font-family: 'Neue Montreal';
   src: url("../font/NeueMontreal-Bold.eot");
@@ -1793,6 +1772,9 @@ li {
 .text-white {
   color: white !important; }
 
+img {
+  display: block; }
+
 /*
     Position
 */
@@ -1924,15 +1906,124 @@ Section - Nuestros Servicios
 =======================*/
 .section-servicios {
   margin-top: 3.5rem;
-  margin-bottom: 20rem; }
-  .section-servicios .title-general h2 {
-    color: #F99716;
-    margin-bottom: 0.5rem; }
+  margin-bottom: 3.5rem; }
+  .section-servicios .title-general {
+    margin-bottom: 2rem; }
+    .section-servicios .title-general h2 {
+      color: #F99716;
+      margin-bottom: 0.5rem; }
 
-.cardServicio--verde {
-  background-color: #14666B; }
-.cardServicio--naranja {
-  background-color: #F99716; }
+.cardServicio {
+  border-radius: 8px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  height: 270px; }
+  .cardServicio--verde {
+    background-color: #14666B; }
+  .cardServicio--naranja {
+    background-color: #F99716; }
+  .cardServicio .contentCardServicio {
+    padding: 2.2rem;
+    display: grid;
+    height: 100%; }
+  .cardServicio .cardServicio_icon {
+    margin: auto; }
+  .cardServicio .cardServicio__title {
+    display: grid;
+    align-content: center;
+    margin: 0.8rem 0; }
+    .cardServicio .cardServicio__title h4 {
+      text-align: center;
+      color: #fff;
+      font-size: 20px; }
+  .cardServicio .cardServicio_informacion p {
+    text-align: center;
+    color: #fff; }
+
+/*=======================*/
+/*=======================
+Section - Nuestros Marcas
+=======================*/
+.section-marcas {
+  margin-top: 5rem;
+  margin-bottom: 2rem; }
+  .section-marcas .title-general {
+    margin-bottom: 3.2rem; }
+    .section-marcas .title-general h2 {
+      color: #14666B;
+      margin-bottom: 0.5rem; }
+
+.owl-marcas .item img {
+  margin: auto; }
+
+/*=======================*/
+/*=======================
+Section - Escogernos
+=======================*/
+.section-escogernos {
+  margin-top: 5rem;
+  margin-bottom: 2rem; }
+
+.escoger-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.2rem;
+  flex-wrap: wrap; }
+  .escoger-info h2 {
+    max-width: 280px;
+    color: #F99716;
+    position: relative;
+    padding-bottom: 2.2rem; }
+    .escoger-info h2::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 3px;
+      background: #14666B; }
+  .escoger-info p {
+    max-width: 430px; }
+
+.moreempleados {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 14px; }
+  .moreempleados__info {
+    color: #ffffff;
+    margin-bottom: 5rem; }
+    .moreempleados__info h2 {
+      font-size: 5rem; }
+    .moreempleados__info p {
+      color: #fff;
+      width: 150px; }
+
+.contentMoreEmpleados {
+  padding: 2rem;
+  height: 350px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between; }
+
+.listempleados {
+  display: flex;
+  gap: 5px; }
+
+.empresavideo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 14px;
+  position: relative;
+  height: 350px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: #fff; }
+  .empresavideo h3 {
+    font-size: 52px;
+    font-weight: inherit; }
 
 /*=======================*/
 
