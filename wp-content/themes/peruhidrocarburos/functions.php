@@ -24,6 +24,7 @@ function lista_estilos(){
     wp_enqueue_style('styleph', get_template_directory_uri().'/css/styleph.css');
     wp_enqueue_style('style', get_template_directory_uri().'/css/style.css');
     wp_enqueue_style('remixicon', get_template_directory_uri().'/css/remixicon.css');
+    //wp_enqueue_style('fancy', get_template_directory_uri().'/css/fancy.min.css');
 }
 
 add_action('wp_enqueue_scripts', 'lista_estilos');
@@ -57,6 +58,13 @@ function agregar_scripts_en_footer() {
 
     // Enqueue the registered script
     wp_enqueue_script('wow_script');
+
+
+    // Registra el archivo JavaScript
+    //wp_register_script('fancybox_script', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array('jquery'), null, true); // El último parámetro es true para cargar el script en el footer
+
+    // Enqueue the registered script
+    //wp_enqueue_script('fancybox_script');
 }
 add_action('wp_enqueue_scripts', 'agregar_scripts_en_footer');
 

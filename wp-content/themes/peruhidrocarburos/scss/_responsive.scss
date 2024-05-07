@@ -99,7 +99,13 @@ input.vs__search {
         }
     }
 }
-@media (max-width: 690px){
+@media (max-width: 720px){
+    .empresavideo a {
+        right: -18px !important;
+        bottom: -18px !important;
+        width: 140px !important;
+        height: 140px !important;
+      }
 }
 
 @media (max-width: 450px){

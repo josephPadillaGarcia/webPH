@@ -91,7 +91,7 @@ get_header();
         </div>
 
         <div class="grid-col">
-            <div class="grid-s-12 grid-m-6 grid-l-4">
+            <div class="grid-s-12 grid-m-4 grid-l-4">
             <?php $imagenempleado = get_field('imagen_fondo_empleado'); ?>
                 <div class="moreempleados" style="background-image: url(<?php echo $imagenempleado['url']; ?>);">
                     <div class="contentMoreEmpleados">
@@ -113,15 +113,42 @@ get_header();
                 </div>
             </div>
 
-            <div class="grid-s-12 grid-m-6 grid-l-8">
+            <div class="grid-s-12 grid-m-8 grid-l-8">
                 <?php $imagenvideo = get_field('imagen_video'); ?>
                 <div class="empresavideo" style="background-image: url(<?php echo $imagenvideo['url']; ?>);">
                     <h3><?php the_field('texto_video'); ?></h3>
+                    <a data-fancybox href="<?php the_field('video'); ?>"><i class="ri-play-fill"></i></a>
                 </div>
             </div>
         </div>
     </div>
     
+</section>
+
+<section class="section-somosph">
+    <div class="container">
+        <div class="content-somosph">
+            <div class="title-somoph">
+                <?php the_field('titulo_somos_ph'); ?>
+            </div>
+        </div>
+        <div class="caracteristicas-ph">
+            <?php if (have_rows('caracteristicas_ph')) { ?>
+                <?php while (have_rows('caracteristicas_ph')) {
+                the_row(); ?>
+
+                    <div class="carac-item">
+                        <?php $imagencarac = get_sub_field('icon_caracteristicas'); ?>
+                        <img class="" src="<?php echo $imagencarac['url']; ?>" alt="<?php echo $imagencarac['title']; ?>">
+                        <div class="info-carac">
+                            <?php the_sub_field('contenido_caracteristicas'); ?>
+                        </div>
+                    </div>                    
+                               
+                <?php } ?>
+            <?php } ?>
+        </div>
+    </div>
 </section>
 
 

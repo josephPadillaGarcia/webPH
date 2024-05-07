@@ -393,9 +393,36 @@ Section - Escogernos
     justify-content: center;
     align-content: center;
     color: #fff;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #00000054;
+        left: 0;
+        bottom: 0;
+        border-radius: 14px;
+      }
     h3 {
         font-size: 52px;
         font-weight: inherit;
+        position: relative;
+      }
+
+      a {
+        position: relative;
+        background-color: $color_1;
+        position: absolute;
+        right: -25px;
+        bottom: -25px;
+        width: 175px;
+        height: 175px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 60px;
+        border-radius: 100px;
+        border: 0.8rem solid #fff;
       }
   }
 
