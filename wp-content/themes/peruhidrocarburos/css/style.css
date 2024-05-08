@@ -1789,6 +1789,9 @@ ul {
 li {
   list-style: none; }
 
+ol li {
+  list-style: decimal; }
+
 .text-white {
   color: white !important; }
 
@@ -1841,6 +1844,8 @@ img {
   text-align: center; }
   .title-general--naranja {
     color: #F99716; }
+  .title-general--left {
+    text-align: left; }
 
 /*==================*/
 /* ESTILOS DE MENU */
@@ -2188,5 +2193,89 @@ Section - Politica
     display: inline-block; }
 
 /*=======================*/
+/*=======================
+Section - Blog
+=======================*/
+.section-blog {
+  margin-bottom: 3.2rem; }
+
+.title-general {
+  margin-bottom: 1.8rem; }
+  .title-general h2 {
+    color: #14666B;
+    margin-bottom: 10px; }
+
+.itemblog {
+  border-radius: 12px;
+  overflow: hidden; }
+
+.infoblog {
+  padding: 1.5rem 2rem;
+  border-left: 1px solid #C8CFD5;
+  border-right: 1px solid #C8CFD5;
+  border-bottom: 1px solid #C8CFD5;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px; }
+
+.autorblog {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #C8CFD5; }
+  .autorblog i {
+    color: #14666B;
+    font-size: 20px; }
+
+.titleblog h4 {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+  color: #14666B; }
+
+.enlaceblog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .enlaceblog a {
+    color: #F99716; }
+  .enlaceblog p {
+    background: #F99716;
+    padding: 12px;
+    border-radius: 6px;
+    color: #ffffff;
+    width: 72px;
+    text-align: center; }
+
+/*=======================*/
+/* FOOTER */
+.footer {
+  background: linear-gradient(90deg, #14666b 0%, #023a3c 100%);
+  color: #ffffff;
+  padding: 3.8rem 0; }
+  .footer__logo img {
+    width: 220px; }
+
+.infocontactos ul {
+  margin: 2rem 0; }
+  .infocontactos ul li {
+    margin: 1.5rem 0; }
+
+.redes {
+  display: flex;
+  gap: 1rem; }
+
+.itemredes a {
+  background: #ffffff36;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px; }
+  .itemredes a i {
+    font-size: 23px; }
+
+/*======================*/
 
 /*# sourceMappingURL=style.css.map */
