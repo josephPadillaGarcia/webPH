@@ -1435,22 +1435,32 @@ input.vs__search {
 .header-filter .grid-datos {
   display: grid; }
 
-@media (max-width: 1160px) {
-  /*.menu.wow.fadeIn ul {
-      display: none;
-  }
-  header .grid-header .menu {
-      display: grid;
-      grid-template-columns: 1fr auto auto;
-      justify-items: right;
-      grid-gap: 20px;
-  }*/ }
+@media (max-width: 1150px) {
+  .itempolitica {
+    margin-bottom: 14rem; }
+    .itempolitica img {
+      height: 420px;
+      object-fit: cover; }
+
+  .section-comprar {
+    margin-top: 5rem !important; } }
+@media (max-width: 1060px) {
+  .caracteristicas-ph {
+    gap: 1.5rem 2rem !important; } }
 @media (max-width: 1025px) {
   .menu-item a {
     padding: 10px 7px !important; }
 
   .btn {
     padding: 12px 20px !important; } }
+@media (max-width: 980px) {
+  .content-somosph {
+    gap: 3.2rem; }
+
+  .caracteristicas-ph {
+    gap: 1.5rem 0rem !important;
+    justify-content: space-between;
+    width: 100%; } }
 @media only screen and (max-width: 900px) {
   .movil-menu {
     display: block !important; }
@@ -1506,7 +1516,11 @@ input.vs__search {
     right: -18px !important;
     bottom: -18px !important;
     width: 140px !important;
-    height: 140px !important; } }
+    height: 140px !important; }
+
+  .info-comprar {
+    text-align: center;
+    margin-bottom: 3.8rem; } }
 @font-face {
   font-family: 'Neue Montreal';
   src: url("../font/NeueMontreal-Bold.eot");
@@ -2054,6 +2068,124 @@ Section - Escogernos
     font-size: 60px;
     border-radius: 100px;
     border: 0.8rem solid #fff; }
+
+/*=======================*/
+/*=======================
+Section - SomosPH
+=======================*/
+.section-somosph {
+  background: #F5F7FA;
+  margin: 5rem 0;
+  padding: 4rem 0; }
+
+.content-somosph {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.caracteristicas-ph {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 5rem; }
+
+.carac-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem; }
+
+.title-somoph h2 {
+  color: #F99716; }
+  .title-somoph h2 strong {
+    color: #4D4D4D; }
+.title-somoph p {
+  margin-top: 12px; }
+
+.info-carac h2 {
+  display: flex; }
+  .info-carac h2 strong {
+    color: #4D4D4D;
+    font-size: 30px; }
+
+/*=======================*/
+/*=======================
+Section - Politica
+=======================*/
+.section-politica {
+  margin-bottom: 3.2rem; }
+  .section-politica .title-general {
+    margin-bottom: 2.8rem; }
+    .section-politica .title-general h2 {
+      color: #14666B;
+      margin-bottom: 10px; }
+    .section-politica .title-general p {
+      color: #F99716; }
+
+.itempolitica {
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 2.2rem 2.2rem 16rem;
+  text-align: center;
+  position: relative; }
+  .itempolitica--verde {
+    background-color: #14666B; }
+  .itempolitica--anaranjado {
+    background-color: #F99716; }
+  .itempolitica .titlepolitica {
+    margin-bottom: 2rem; }
+    .itempolitica .titlepolitica h4 {
+      font-size: 25px;
+      margin-bottom: 8px; }
+    .itempolitica .titlepolitica p {
+      color: #fff; }
+  .itempolitica .videopolitica {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; }
+  .itempolitica img {
+    width: 100%;
+    border-radius: 10px; }
+  .itempolitica .iconpolitica {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    margin-top: -1rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 30px; }
+    .itempolitica .iconpolitica--verde {
+      background-color: #14666B; }
+    .itempolitica .iconpolitica--anaranjado {
+      background-color: #F99716; }
+
+/*=======================*/
+/*=======================
+Section - Politica
+=======================*/
+.section-comprar {
+  margin-top: 20rem;
+  margin-bottom: 5rem; }
+
+.img-comprar {
+  margin: auto; }
+
+.info-comprar {
+  display: grid;
+  align-content: center;
+  height: 100%;
+  gap: 2rem; }
+  .info-comprar h2 {
+    color: #F99716; }
+  .info-comprar a {
+    background: #F99716;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 4px;
+    display: inline-block; }
 
 /*=======================*/
 

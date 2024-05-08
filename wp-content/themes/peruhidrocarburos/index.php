@@ -131,23 +131,73 @@ get_header();
             <div class="title-somoph">
                 <?php the_field('titulo_somos_ph'); ?>
             </div>
-        </div>
-        <div class="caracteristicas-ph">
-            <?php if (have_rows('caracteristicas_ph')) { ?>
-                <?php while (have_rows('caracteristicas_ph')) {
-                the_row(); ?>
+            <div class="caracteristicas-ph">
+                <?php if (have_rows('caracteristicas_ph')) { ?>
+                    <?php while (have_rows('caracteristicas_ph')) {
+                    the_row(); ?>
 
-                    <div class="carac-item">
-                        <?php $imagencarac = get_sub_field('icon_caracteristicas'); ?>
-                        <img class="" src="<?php echo $imagencarac['url']; ?>" alt="<?php echo $imagencarac['title']; ?>">
-                        <div class="info-carac">
-                            <?php the_sub_field('contenido_caracteristicas'); ?>
-                        </div>
-                    </div>                    
-                               
+                        <div class="carac-item">
+                            <?php $imagencarac = get_sub_field('icon_caracteristicas'); ?>
+                            <img class="" src="<?php echo $imagencarac['url']; ?>" alt="<?php echo $imagencarac['title']; ?>">
+                            <div class="info-carac">
+                                <?php the_sub_field('contenido_caracteristicas'); ?>
+                            </div>
+                        </div>                    
+                                
+                    <?php } ?>
                 <?php } ?>
-            <?php } ?>
+            </div>
         </div>
+        
+    </div>
+</section>
+
+<section class="section-politica">
+    <div class="container">        
+        <div class="title-general">
+            <?php the_field('titulo_politica'); ?>
+        </div>
+        <div class="content-politica">
+
+            <div class="grid-col">             
+                <?php if (have_rows('lista_video_politica')) { ?>
+                    <?php while (have_rows('lista_video_politica')) {
+                    the_row(); ?>
+
+                        <div class="grid-s-12 grid-m-6 grid-l-4">
+                            <div class="itempolitica itempolitica--<?php the_sub_field('color'); ?>">
+                                <div class="titlepolitica">
+                                    <?php the_sub_field('titulo_item_politica'); ?>
+                                </div>
+                                <div class="videopolitica">
+                                    <?php $imagenpolitico = get_sub_field('imagen_politica'); ?>
+                                    <img class="" src="<?php echo $imagenpolitico['url']; ?>" alt="<?php echo $imagenpolitico['title']; ?>">
+                                    <a class="iconpolitica iconpolitica--<?php the_sub_field('color'); ?>" data-fancybox href="<?php the_sub_field('video_politica'); ?>"><i class="ri-play-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php } ?>
+                <?php } ?>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section-comprar">
+    <div class="container">
+        <div class="grid-col">
+            <div class="grid-s-12 grid-m-6 grid-l-6">
+                <?php $imagen = get_field('img_comprar'); ?>
+                <img class="img-comprar" src="<?php echo $imagen['url']; ?>" alt="<?php echo $imagen['title']; ?>">
+            </div>
+            <div class="grid-s-12 grid-m-6 grid-l-6">
+                <div class="info-comprar">
+                    <?php the_field('contenido_comprar'); ?>
+                </div>
+            </div>
+        </div>                        
     </div>
 </section>
 
