@@ -34,6 +34,78 @@
                 <?php endif; ?>
 
             </div>
+
+            <div class="grid-s-12 grid-m-6 grid-l-2">
+                <div class="footer__title">
+                    <h4>Menú</h4>
+                </div>
+                <div class="footer__nav">
+                    <?php
+                        $conf = [
+                            'theme_location' =>  'header-menu', // este sera el nombre del menu que le tengamos asignado en functions.php usando register_nav_menu()
+                            'menu' =>  '',
+                            'menu_id' =>  'menu-content', // <ul id="navMenu">
+                            'menu_class' => 'main-nav__list main-nav__list--h-line-bottom main-nav__list--h-color-text', // <ul class="navMenu">
+                            'container' => 'nav', // <nav></nav>
+                            'container_class' => 'main-nav', // <nav class="navMenu">
+                            'container_id' => '',    // <nav id="navMenu">'echo' => true,
+                            'fallback_cb' => 'wp_page_menu', // en caso de que el menu no exista cargar wp_page_menu
+                            'before' => '', // texto antes del texto del enlace.
+                            'after' => '', // texto despues del texto del enlace.
+                            'link_before' => '<span>', // <a href=""><span> ....
+                            'link_after' => '</span>', // </span></a>
+                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            'item_spacing' => 'preserve', // preserve / discard
+                            'depth' => 2, // numero de niveles que serán mostrados
+                            'walker' => ''
+                        ];
+
+                        wp_nav_menu($conf);
+                    ?>
+                </div>
+            </div>
+
+            <div class="grid-s-12 grid-m-6 grid-l-3">
+                <div class="footer__title">
+                    <h4>Ayuda</h4>
+                </div>
+                <div class="footer__nav">
+                    <?php
+                        $conf = [
+                            'theme_location' =>  'footer-enlaces', // este sera el nombre del menu que le tengamos asignado en functions.php usando register_nav_menu()
+                            'menu' =>  '',
+                            'menu_id' =>  'menu-content', // <ul id="navMenu">
+                            'menu_class' => 'main-nav__list main-nav__list--h-line-bottom main-nav__list--h-color-text', // <ul class="navMenu">
+                            'container' => 'nav', // <nav></nav>
+                            'container_class' => 'main-nav', // <nav class="navMenu">
+                            'container_id' => '',    // <nav id="navMenu">'echo' => true,
+                            'fallback_cb' => 'wp_page_menu', // en caso de que el menu no exista cargar wp_page_menu
+                            'before' => '', // texto antes del texto del enlace.
+                            'after' => '', // texto despues del texto del enlace.
+                            'link_before' => '<span>', // <a href=""><span> ....
+                            'link_after' => '</span>', // </span></a>
+                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            'item_spacing' => 'preserve', // preserve / discard
+                            'depth' => 2, // numero de niveles que serán mostrados
+                            'walker' => ''
+                        ];
+
+                        wp_nav_menu($conf);
+                    ?>
+                </div>
+            </div>
+
+            <div class="grid-s-12 grid-m-6 grid-l-3">
+                <div class="footer__title">
+                    <h4>Contáctanos</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="copy">
+            <p>Copyright ©2024 PH. All rights reserved.</p>
         </div>
     </div>
 </footer>

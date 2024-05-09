@@ -6,7 +6,7 @@ function register_menu_header(){
 
 	register_nav_menus([
         'header-menu' => 'menu',
-        //'top-menu' => 'Topmenu',
+        'footer-enlaces' => 'footer',
     ]);
 }
 

@@ -97,6 +97,10 @@ input.vs__search {
     .banner__contenido {
         height: 450px !important;
     }
+
+    .footer__nav .main-nav__list {
+        display: block !important;
+      }
 }
 @media (max-width: 840px){
     .escoger-info{
