@@ -137,9 +137,21 @@ input.vs__search {
         text-align: center;
         margin-bottom: 3.8rem;
       }
+
+      .formcontacto {
+        padding: 3.5rem 4rem !important;
+      }
+
+      .sectioncontacto {
+        margin: 3.5rem 0 !important;
+      }
 }
 
-@media (max-width: 450px){
+@media (max-width: 500px){
+
+    .formcontacto {
+        padding: 3.5rem 2rem !important;
+      }
 }
 
 

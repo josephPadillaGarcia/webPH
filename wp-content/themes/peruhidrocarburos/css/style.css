@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*CONTENEDOR*/
 /*Dispositivos*/
 /*Media screen*/
@@ -1325,12 +1326,15 @@ BOTONES
       font-size: 14px;
       padding-bottom: 5px; }
     .form .input-group__input {
-      border: 1px solid #c2c2c2;
-      border-radius: 3px;
-      height: 30px;
+      border-radius: 50px;
+      height: 48px;
       margin-bottom: 2px;
-      padding: 0 5px;
-      outline: none; }
+      padding: 0 15px;
+      outline: none;
+      border: none; }
+      .form .input-group__input::placeholder {
+        color: #14666B;
+        font-size: 17px; }
     .form .input-group__validar {
       font-size: 11px; }
     .form .input-group__select {
@@ -1340,11 +1344,15 @@ BOTONES
       padding: 0 5px;
       outline: none; }
     .form .input-group__text-area {
-      height: 85px;
+      height: 120px;
       outline: none;
       padding: 8px 10px;
-      border: 1px solid #c2c2c2;
-      border-radius: 3px; }
+      border: none;
+      border-radius: 15px;
+      margin-bottom: 1.5rem; }
+      .form .input-group__text-area::placeholder {
+        color: #14666B;
+        font-size: 17px; }
   .form__checkbox {
     margin: 18px 0; }
     .form__checkbox .checkbox {
@@ -1358,15 +1366,18 @@ BOTONES
           color: #4e73bf;
           text-decoration: revert; }
   .form__action {
-    margin-top: 18px; }
+    margin-top: 18px;
+    text-align: center; }
     .form__action button {
-      width: 100%;
-      background-color: #4e73bf;
+      background-color: #F99716;
       color: #ffffff;
       border: none;
-      height: 42px;
-      border-radius: 3px;
-      cursor: pointer; }
+      height: 48px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 17px;
+      padding: 0 4.2rem;
+      font-weight: bold; }
   .form__success span {
     display: block;
     font-size: 14px;
@@ -1523,7 +1534,16 @@ input.vs__search {
 
   .info-comprar {
     text-align: center;
-    margin-bottom: 3.8rem; } }
+    margin-bottom: 3.8rem; }
+
+  .formcontacto {
+    padding: 3.5rem 4rem !important; }
+
+  .sectioncontacto {
+    margin: 3.5rem 0 !important; } }
+@media (max-width: 500px) {
+  .formcontacto {
+    padding: 3.5rem 2rem !important; } }
 @font-face {
   font-family: 'Neue Montreal';
   src: url("../font/NeueMontreal-Bold.eot");
@@ -2365,6 +2385,55 @@ Aside Single Blog
     display: inline-block;
     border-radius: 5px;
     color: #fff; }
+
+/*======================*/
+/*=======================
+Página Contactanos
+=======================*/
+.sectioncontacto {
+  margin: 5.2rem 0; }
+
+.formcontacto {
+  background: linear-gradient(180deg, #14666b 0%, #023a3c 100%);
+  max-width: 700px;
+  border-radius: 30px;
+  padding: 3.5rem 8rem;
+  margin: auto; }
+  .formcontacto .title-general h2 {
+    font-size: 25px; }
+  .formcontacto .title-general h2, .formcontacto .title-general p {
+    color: #ffffff; }
+  .formcontacto .title-general img {
+    margin: auto;
+    margin-bottom: 2.2rem; }
+
+/*======================*/
+/*=======================
+Página Nosotros
+=======================*/
+.informacionnosotros {
+  margin: 5rem 0 3rem;
+  text-align: center; }
+  .informacionnosotros .infobanner {
+    max-width: 620px;
+    margin: auto;
+    display: grid;
+    gap: 1.5rem; }
+    .informacionnosotros .infobanner img {
+      margin: auto; }
+    .informacionnosotros .infobanner h2 {
+      color: #14666B; }
+
+.sectionlista {
+  margin: 6rem 0 auto; }
+
+.infolistaph h2 {
+  font-size: 25px;
+  color: #14666B; }
+
+div.infolistaph:nth-child(2) {
+  border-left: 1px solid red;
+  border-right: 1px solid red; }
 
 /*======================*/
 

@@ -35,12 +35,16 @@
             padding-bottom: 5px;
         }
         &__input{
-            border: 1px solid #c2c2c2;
-            border-radius: 3px;
-            height: 30px;
+            border-radius: 50px;
+            height: 48px;
             margin-bottom: 2px;
-            padding: 0 5px;
+            padding: 0 15px;
             outline: none;
+            border: none;
+            &::placeholder {
+                color: #14666B;
+                font-size: 17px;
+              }
         }
         &__validar{
             font-size: 11px;
@@ -53,11 +57,16 @@
             outline: none;
         }
         &__text-area{
-            height: 85px;
+            height: 120px;
             outline: none;            
             padding: 8px 10px;
-            border: 1px solid #c2c2c2;
-            border-radius: 3px;
+            border: none;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            &::placeholder {
+                color: #14666B;
+                font-size: 17px;
+              }
         }
     }
     &__checkbox{
@@ -79,14 +88,17 @@
     }
     &__action{
         margin-top: 18px;
+        text-align: center;
         button{
-            width: 100%;
-            background-color: #4e73bf;
+            background-color: $color_2;
             color: #ffffff;
             border: none;
-            height: 42px;
-            border-radius: 3px;
+            height: 48px;
+            border-radius: 50px;
             cursor: pointer;
+            font-size: 17px;
+            padding: 0 4.2rem;
+            font-weight: bold;
         }
     }
     &__success{

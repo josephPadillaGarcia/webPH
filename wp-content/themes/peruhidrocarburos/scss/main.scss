@@ -856,3 +856,72 @@ Aside Single Blog
       }
   }
 /*======================*/
+
+/*=======================
+Página Contactanos
+=======================*/
+
+.sectioncontacto {
+    margin: 5.2rem 0;
+  }
+
+  .formcontacto{
+    background: linear-gradient(180deg, #14666b 0%, #023a3c 100%);
+    max-width: 700px;
+    border-radius: 30px;
+    padding: 3.5rem 8rem;
+    margin: auto;
+    .title-general{
+        h2{
+            font-size: 25px;
+        }
+        h2, p{
+            color: #ffffff;
+        }
+        img {
+            margin: auto;
+            margin-bottom: 2.2rem;
+          }
+    }
+}
+
+/*======================*/
+
+/*=======================
+Página Nosotros
+=======================*/
+
+.informacionnosotros {
+    margin: 5rem 0 3rem;
+    text-align: center;
+    .infobanner{
+        max-width: 620px;
+        margin: auto;
+        display: grid;
+        gap: 1.5rem;
+        img {
+            margin: auto;
+          }
+          h2{
+            color: $color_1;
+          }
+    }
+  }
+
+  .sectionlista {
+    margin: 6rem 0 auto;
+  }
+  
+  .infolistaph {
+    h2 {
+        font-size: 25px;
+        color: $color_1;
+      }
+  }
+
+  
+  div.infolistaph:nth-child(2) {
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+  }
+/*======================*/

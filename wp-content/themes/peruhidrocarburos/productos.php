@@ -1,6 +1,6 @@
 <?php
 /*
-template name: Blog
+template name: Productos
 */
 get_header();
 ?>

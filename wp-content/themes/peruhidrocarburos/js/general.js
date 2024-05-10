@@ -65,4 +65,49 @@ $(document).ready(function () {
         }
     });
 
+
+    $('.owl-trabajos.owl-carousel').owlCarousel({
+        loop: false,
+        center: false,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        navText: ["<i class='ri-arrow-left-s-line'></i>", "<i class='ri-arrow-right-s-line'></i>"],
+        responsive: {
+            0: {
+                items: 2,
+            },
+            600: {
+                items: 3
+            },
+            1049: {
+                items: 3
+            }
+        }
+    });
+
+
+    $('.owl-equipo.owl-carousel').owlCarousel({
+        loop: false,
+        center: false,
+        margin: 0,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        navText: ["<i class='ri-arrow-left-s-line'></i>", "<i class='ri-arrow-right-s-line'></i>"],
+        responsive: {
+            0: {
+                items: 2,
+            },
+            600: {
+                items: 3
+            },
+            1049: {
+                items: 3
+            }
+        }
+    });
+
 });

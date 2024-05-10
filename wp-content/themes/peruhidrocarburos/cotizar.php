@@ -1,6 +1,6 @@
 <?php
 /*
-template name: Contactanos
+template name: Cotizador
 */
 get_header();
 ?>
@@ -9,7 +9,7 @@ get_header();
     <div class="container">
         <div class="formcontacto">
             <div class="title-general">
-                <?php the_field('informacion_contacto'); ?>
+                <?php the_field('informacion_formulario_cotizar'); ?>
             </div>
 
             <div class="form">
@@ -33,11 +33,16 @@ get_header();
                     <input type="text" class="input-group__input" placeholder="Empresa">
                 </div>
             </div>
+
             <div class="form__group grid-col">
-                <div class="input-group grid-s-12 grid-m-12 grid-l-12">
-                    <textarea name="textarea" class="input-group__text-area" placeholder="Mensaje"></textarea>
+                <div class="input-group grid-s-12 grid-m-12 grid-l-6">
+                    <input type="text" class="input-group__input" placeholder="Nombre del Producto">
+                </div>
+                <div class="input-group grid-s-12 grid-m-12 grid-l-6">
+                    <input type="text" class="input-group__input" placeholder="Código">
                 </div>
             </div>
+
             <div class="form__action">
                 <button type="submit">Enviar</button>
             </div>

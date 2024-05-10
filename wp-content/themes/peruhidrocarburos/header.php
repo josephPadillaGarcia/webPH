@@ -56,7 +56,7 @@
                         ?>
                     </div>
                         
-                    <a href="#!" class="btn-contacto btn btn--verde">
+                    <a href="<?php echo site_url(); ?>/contactanos" class="btn-contacto btn btn--verde">
                         <span>Contáctanos</span>
                     </a> 
                     <ul class="movil-menu" style="display: none;">
@@ -116,7 +116,7 @@
 
                             wp_nav_menu($conf);
                             ?>
-                            <a href="#!" class="btn btn--naranja">
+                            <a href="<?php echo site_url(); ?>/contactanos" class="btn btn--naranja">
                                 <span>Contáctanos</span>
                             </a> 
                         </div>
