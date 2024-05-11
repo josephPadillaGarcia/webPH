@@ -101,6 +101,29 @@ input.vs__search {
     .footer__nav .main-nav__list {
         display: block !important;
       }
+
+      .btn-nav i {
+        font-size: 22px;
+        color: $color_1;
+      }
+
+      .sidenav__body{
+        .menu-item {
+            a {
+                display: block;
+              }
+
+              .sub-menu{
+                border-radius: 5px;
+                li{
+                    a{
+                        padding-left: 15px !important;
+                        padding-right: 15px !important;
+                    }
+                }
+              }
+        }
+      }
 }
 @media (max-width: 840px){
     .escoger-info{

@@ -21,7 +21,7 @@ get_header();
                 <?php while (have_rows('lista_info_ph')) {
                 the_row(); ?>
                     <div class="grid-s-12 grid-m-6 grid-l-4">
-                        <div class="infolistaph">
+                        <div class="infolistaph infolistaph__<?php echo get_row_index(); ?>">
                             <?php the_sub_field('info_ph'); ?>
                         </div>
                     </div>
@@ -54,27 +54,29 @@ get_header();
 
 <section class="sectionconviertete">
     <div class="container">
-        <div class="grid-s-12 grid-m-6 grid-l-4">
-            <div class="infoconviertete">
-                <?php the_field('informacion_convierte'); ?>
+        <div class="grid-col">
+            <div class="grid-s-12 grid-m-6 grid-l-4">
+                <div class="infoconviertete">
+                    <?php the_field('informacion_convierte'); ?>
+                </div>
             </div>
-        </div>
-        <div class="grid-s-12 grid-m-6 grid-l-4">
-            <div class="convierteteimg">
-                <?php $imagenconviertete = get_field('imagen_convierte'); ?>
-                <img class="" src="<?php echo $imagenconviertete['url']; ?>" alt="<?php echo $imagenconviertete['title']; ?>">
+            <div class="grid-s-12 grid-m-6 grid-l-4">
+                <div class="convierteteimg">
+                    <?php $imagenconviertete = get_field('imagen_convierte'); ?>
+                    <img class="" src="<?php echo $imagenconviertete['url']; ?>" alt="<?php echo $imagenconviertete['title']; ?>">
+                </div>
             </div>
-        </div>
-        <div class="grid-s-12 grid-m-6 grid-l-4">
-            <div class="convierteteimg">
-                <?php if (have_rows('item_convierte')) { ?>
-                    <?php while (have_rows('item_convierte')) {
-                        the_row(); ?>
-                        <ul>
-                            <li><?php the_sub_field('item'); ?></li>
-                        </ul>
-                    <?php } ?>
-                <?php } ?>
+            <div class="grid-s-12 grid-m-6 grid-l-4">
+                <div class="conviertetelista">
+                    <ul>                                
+                        <?php if (have_rows('item_convierte')) { ?>
+                            <?php while (have_rows('item_convierte')) {
+                                the_row(); ?>
+                                    <li><h2><?php the_sub_field('item'); ?></h2></li>                                    
+                            <?php } ?>
+                        <?php } ?>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
