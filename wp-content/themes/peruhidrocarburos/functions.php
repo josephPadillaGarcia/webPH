@@ -69,10 +69,19 @@ function agregar_scripts_en_footer() {
 add_action('wp_enqueue_scripts', 'agregar_scripts_en_footer');
 
 
+add_action( 'widgets_init', 'filter_products' );
+
+function filter_products () {
+    register_sidebar( array(
+    'name' => 'Filter Products',
+    'id' => 'filterproducts',
+    'class' => '',
+    ) );
+}
 
 
 
-function custom_search_filter($query) {
+/*function custom_search_filter($query) {
     if ($query->is_search && !is_admin()) {
         $query->set('post_type', 'post');
         $query->set('s', ''); // Limpiar la consulta para que no busque en el contenido
@@ -80,5 +89,5 @@ function custom_search_filter($query) {
     }
     return $query;
 }
-add_filter('pre_get_posts', 'custom_search_filter');
+add_filter('pre_get_posts', 'custom_search_filter');*/
 
