@@ -5,6 +5,7 @@ template name: Blog
 get_header();
 ?>
 
+
 <section class="section blog sectionSingleBlog">
     <div class="container">
         <div class="grid-col">
@@ -15,7 +16,7 @@ get_header();
                     <?php
                         // Mostrar una nube de etiquetas para la taxonomía 'categoria'
                         $args = array(
-                            'taxonomy' => 'tipo_producto',
+                            'taxonomy' => 'marca_producto',
                         );
                         echo '<div class="taxonomia-cloud">';
                         wp_tag_cloud( $args );
@@ -27,10 +28,14 @@ get_header();
 
             <div class="grid-s-12 grid-m-9 grid-l-10">
                 <div class="singleblog__content">
+                    <?php $term = get_queried_object();  ?>
+    
+                    <h1 class="category-title">Marca <?php echo $term->name; ?>
+                        <span class="taxonomy-label"><?php /*echo $term->taxonomy; */?> (<?php echo $term->count; ?> productos registrados)</span>
+                    </h1>
 
                     <div class="singleblog__header">
                         <?php dynamic_sidebar('filterproducts');?>
-                        <a href="<?php echo site_url(); ?>/blog"><i class="ri-arrow-left-s-line"></i><span>Volver</span></a>
                     </div>  
 
                     <div class="blog__lista">
@@ -73,14 +78,14 @@ get_header();
 
                             <?php endwhile;
 
-the_posts_navigation();
+                            the_posts_navigation();
 
-else :
+                            else :
 
-get_template_part( 'template-parts/content/content-none' );
+                            get_template_part( 'template-parts/content/content-none' );
 
-endif;
-?>
+                            endif;
+                            ?>
 
 
                         </div>
@@ -92,6 +97,9 @@ endif;
         </div>
     </div>
 </section>
+
+
+
 
 
 <?php 
