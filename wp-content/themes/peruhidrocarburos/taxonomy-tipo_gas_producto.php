@@ -11,16 +11,19 @@ get_header();
         <div class="grid-col">
             <div class="grid-s-12 grid-m-3 grid-l-2">
                 <div class="asideBlog">
-                    <h3>GNV</h3>
+                <?php $term = get_queried_object();  ?>
+    
+                <h3 class="category-title"><?php echo $term->name; ?></h3>
 
                     <?php
                         // Mostrar una nube de etiquetas para la taxonomía 'categoria'
-                        $args = array(
+                        /*$args = array(
                             'taxonomy' => 'marca_producto',
                         );
                         echo '<div class="taxonomia-cloud">';
                         wp_tag_cloud( $args );
-                        echo '</div>';
+                        echo '</div>';*/
+                        dynamic_sidebar('filtermarcaproducts');
                     ?>
                      
                 </div>
@@ -30,7 +33,7 @@ get_header();
                 <div class="singleblog__content">
                     <?php $term = get_queried_object();  ?>
     
-                    <h1 class="category-title">Marca <?php echo $term->name; ?>
+                    <h1 class="category-title"><?php echo $term->name; ?>
                         <span class="taxonomy-label"><?php /*echo $term->taxonomy; */?> (<?php echo $term->count; ?> productos registrados)</span>
                     </h1>
 

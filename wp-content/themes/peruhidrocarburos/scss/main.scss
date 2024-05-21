@@ -890,6 +890,30 @@ Página Contactanos
     }
 }
 
+.wpcf7-spinner {
+    position: absolute;
+    right: 36%;
+    bottom: 25%;
+    transform: translateX(50%);
+  }
+
+  input[type="number"]
+{
+    -webkit-appearance: textfield !important;
+    margin: 0;
+    -moz-appearance:textfield !important;
+}
+
+.wpcf7-not-valid-tip {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    background: #e35d5d;
+    padding: 5px 17px;
+    border-radius: 100px;
+  }
+
 /*======================*/
 
 /*=======================

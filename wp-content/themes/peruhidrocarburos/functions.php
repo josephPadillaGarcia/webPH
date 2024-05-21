@@ -79,6 +79,16 @@ function filter_products () {
     ) );
 }
 
+add_action( 'widgets_init', 'filter_marca_products' );
+
+function filter_marca_products () {
+    register_sidebar( array(
+    'name' => 'Filter Marca Products',
+    'id' => 'filtermarcaproducts',
+    'class' => '',
+    ) );
+}
+
 
 
 /*function custom_search_filter($query) {

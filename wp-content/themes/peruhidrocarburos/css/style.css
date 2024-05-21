@@ -1331,7 +1331,8 @@ BOTONES
       margin-bottom: 2px;
       padding: 0 15px;
       outline: none;
-      border: none; }
+      border: none;
+      width: 100%; }
       .form .input-group__input::placeholder {
         color: #14666B;
         font-size: 17px; }
@@ -1349,7 +1350,8 @@ BOTONES
       padding: 8px 10px;
       border: none;
       border-radius: 15px;
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1.5rem;
+      width: 100%; }
       .form .input-group__text-area::placeholder {
         color: #14666B;
         font-size: 17px; }
@@ -1367,8 +1369,9 @@ BOTONES
           text-decoration: revert; }
   .form__action {
     margin-top: 18px;
-    text-align: center; }
-    .form__action button {
+    text-align: center;
+    position: relative; }
+    .form__action button, .form__action input[type="submit"] {
       background-color: #F99716;
       color: #ffffff;
       border: none;
@@ -2421,6 +2424,26 @@ Página Contactanos
   .formcontacto .title-general img {
     margin: auto;
     margin-bottom: 2.2rem; }
+
+.wpcf7-spinner {
+  position: absolute;
+  right: 36%;
+  bottom: 25%;
+  transform: translateX(50%); }
+
+input[type="number"] {
+  -webkit-appearance: textfield !important;
+  margin: 0;
+  -moz-appearance: textfield !important; }
+
+.wpcf7-not-valid-tip {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
+  background: #e35d5d;
+  padding: 5px 17px;
+  border-radius: 100px; }
 
 /*======================*/
 /*=======================

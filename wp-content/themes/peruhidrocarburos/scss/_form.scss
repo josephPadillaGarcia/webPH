@@ -41,6 +41,7 @@
             padding: 0 15px;
             outline: none;
             border: none;
+            width: 100%;
             &::placeholder {
                 color: #14666B;
                 font-size: 17px;
@@ -63,6 +64,7 @@
             border: none;
             border-radius: 15px;
             margin-bottom: 1.5rem;
+            width: 100%;
             &::placeholder {
                 color: #14666B;
                 font-size: 17px;
@@ -89,7 +91,8 @@
     &__action{
         margin-top: 18px;
         text-align: center;
-        button{
+        position: relative;
+        button, input[type="submit"]{
             background-color: $color_2;
             color: #ffffff;
             border: none;

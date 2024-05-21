@@ -13,40 +13,42 @@ get_header();
             </div>
 
             <div class="form">
-            <div class="form__group grid-col">
-                <div class="input-group grid-s-12 grid-m-12 grid-l-12">
-                    <input type="text" class="input-group__input" placeholder="Nombres y Apellidos">
+                <!--div class="form__group grid-col">
+                    <div class="input-group grid-s-12 grid-m-12 grid-l-12">
+                        <input type="text" class="input-group__input" placeholder="Nombres y Apellidos">
+                    </div>
                 </div>
-            </div>
-            
-            <div class="form__group grid-col">
-                <div class="input-group grid-s-12 grid-m-12 grid-l-12">
-                    <input type="text" class="input-group__input" placeholder="Email">
+                
+                <div class="form__group grid-col">
+                    <div class="input-group grid-s-12 grid-m-12 grid-l-12">
+                        <input type="text" class="input-group__input" placeholder="Email">
+                    </div>
                 </div>
-            </div>
 
-            <div class="form__group grid-col">
-                <div class="input-group grid-s-12 grid-m-12 grid-l-6">
-                    <input type="text" class="input-group__input" placeholder="Teléfono">
+                <div class="form__group grid-col">
+                    <div class="input-group grid-s-12 grid-m-12 grid-l-6">
+                        <input type="text" class="input-group__input" placeholder="Teléfono">
+                    </div>
+                    <div class="input-group grid-s-12 grid-m-12 grid-l-6">
+                        <input type="text" class="input-group__input" placeholder="Empresa">
+                    </div>
                 </div>
-                <div class="input-group grid-s-12 grid-m-12 grid-l-6">
-                    <input type="text" class="input-group__input" placeholder="Empresa">
-                </div>
-            </div>
 
-            <div class="form__group grid-col">
-                <div class="input-group grid-s-12 grid-m-12 grid-l-6">
-                    <input type="text" class="input-group__input" placeholder="Nombre del Producto">
+                <div class="form__group grid-col">
+                    <div class="input-group grid-s-12 grid-m-12 grid-l-6">
+                        <input type="text" class="input-group__input" placeholder="Nombre del Producto">
+                    </div>
+                    <div class="input-group grid-s-12 grid-m-12 grid-l-6">
+                        <input type="text" class="input-group__input" placeholder="Código">
+                    </div>
                 </div>
-                <div class="input-group grid-s-12 grid-m-12 grid-l-6">
-                    <input type="text" class="input-group__input" placeholder="Código">
-                </div>
-            </div>
 
-            <div class="form__action">
-                <button type="submit">Enviar</button>
+                <div class="form__action">
+                    <button type="submit">Enviar</button>
+                </div-->
+
+                <?php echo do_shortcode( '[contact-form-7 id="42bb7e9" title="Formulario Cotizador"]' ); ?>
             </div>
-        </div>
 
         </div>
     </div>

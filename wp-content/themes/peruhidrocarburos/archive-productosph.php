@@ -15,7 +15,7 @@ get_header();
                     <?php
                         // Mostrar una nube de etiquetas para la taxonomía 'categoria'
                         $args = array(
-                            'taxonomy' => 'tipo_producto',
+                            'taxonomy' => 'tipo_gas_producto',
                         );
                         echo '<div class="taxonomia-cloud">';
                         wp_tag_cloud( $args );
