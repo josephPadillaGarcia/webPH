@@ -675,6 +675,37 @@ Section - Blog
       }
   }
 
+  .singleblog{
+    &__header{
+        margin-bottom: 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            background: $color_1;
+            padding: 9px 15px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            border-radius: 8px;
+            gap: 0.5rem;
+            i {
+                font-size: 24px;
+              }
+          }
+    }
+    &__imagenbanner {
+        figure {
+            img {
+                height: 420px;
+                object-fit: cover;
+                border-radius: 10px;
+              }
+        }
+    }
+  }
+
+
 /*=======================*/
 
 /* FOOTER */
@@ -939,7 +970,7 @@ Página Nosotros
 
   .sectionlista {
     margin: 6rem 0 auto;
-    margin-bottom: 5.2rem;
+    margin-bottom: 6.2rem;
   }
   
   .infolistaph {
@@ -958,7 +989,15 @@ Página Nosotros
       &__3{
         padding-left: 2rem;
       }
-  }
+      img {
+        background: #f99716;
+        padding: 0.6rem;
+        margin-bottom: 0.8rem;
+        border-radius: 14px;
+        width: 60px;
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+      }
+}
 
 .owl-trabajos{
     .item{
@@ -1043,6 +1082,36 @@ Página Nosotros
                 color: #89939E;
             }
         }
+    }
+  }
+
+  .sectionequipo {
+    margin-bottom: 3rem;
+  }
+
+  .owl-equipo{
+    .item{
+        .imgtrabajador {
+            img {
+                border-radius: 15px;
+                width: 100%;
+              }
+        }
+
+          .nombretrabajador {
+            margin-top: 1.2rem;
+            color: $color_1;
+            h4 {
+                font-size: 20px;
+              }
+          }
+
+          .cargotrabajador {
+            p {
+                font-size: 14px;
+                margin-top: 5px;
+              }
+          }
     }
   }
 

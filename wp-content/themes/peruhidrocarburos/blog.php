@@ -32,10 +32,10 @@ get_header();
             <div class="grid-s-12 grid-m-9 grid-l-10">
                 <div class="singleblog__content">
 
-<div class="singleblog__header">
-    <div class="title-general title-general--left">
-                    <?php the_field('titulo_pagina_blog'); ?>
-                </div>
+                    <div class="singleblog__header">
+                        <div class="title-general title-general--left">
+                            <?php the_field('titulo_pagina_blog'); ?>
+                        </div>
                         <a href="<?php echo site_url(); ?>/blog"><i class="ri-arrow-left-s-line"></i><span>Volver</span></a>
                     </div>
                 <div class="blog__lista">

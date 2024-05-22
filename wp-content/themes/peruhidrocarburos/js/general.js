@@ -90,10 +90,11 @@ $(document).ready(function () {
 
 
     $('.owl-equipo.owl-carousel').owlCarousel({
-        loop: true,
-        center: true,
+        /*loop: true,
+        center: true,*/
         margin: 15,
-        nav: true,
+        nav: false,
+        dots: false,
         autoplay: true,
         autoplayTimeout: 4000,
         autoplayHoverPause: true,

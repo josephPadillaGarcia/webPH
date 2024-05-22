@@ -1522,7 +1522,10 @@ input.vs__search {
     border-radius: 5px; }
     .sidenav__body .menu-item .sub-menu li a {
       padding-left: 15px !important;
-      padding-right: 15px !important; } }
+      padding-right: 15px !important; }
+
+  .singleblog__content {
+    padding-left: 0 !important; } }
 @media (max-width: 840px) {
   .escoger-info {
     display: flex;
@@ -1555,7 +1558,13 @@ input.vs__search {
     padding: 3.5rem 4rem !important; }
 
   .sectioncontacto {
-    margin: 3.5rem 0 !important; } }
+    margin: 3.5rem 0 !important; }
+
+  .singleblog__content {
+    margin-top: 0.8rem !important; }
+
+  .singleblog__imagenbanner figure img {
+    height: 350px !important; } }
 @media (max-width: 500px) {
   .formcontacto {
     padding: 3.5rem 2rem !important; } }
@@ -2282,6 +2291,26 @@ Section - Blog
     width: 72px;
     text-align: center; }
 
+.singleblog__header {
+  margin-bottom: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .singleblog__header a {
+    background: #14666B;
+    padding: 9px 15px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 8px;
+    gap: 0.5rem; }
+    .singleblog__header a i {
+      font-size: 24px; }
+.singleblog__imagenbanner figure img {
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px; }
+
 /*=======================*/
 /* FOOTER */
 .footer {
@@ -2464,7 +2493,7 @@ Página Nosotros
 
 .sectionlista {
   margin: 6rem 0 auto;
-  margin-bottom: 5.2rem; }
+  margin-bottom: 6.2rem; }
 
 .infolistaph h2 {
   font-size: 25px;
@@ -2477,6 +2506,13 @@ Página Nosotros
   border-right: 1px solid #dddddd91; }
 .infolistaph__3 {
   padding-left: 2rem; }
+.infolistaph img {
+  background: #f99716;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  border-radius: 14px;
+  width: 60px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
 
 .owl-trabajos .item img {
   width: 100%;
@@ -2534,6 +2570,21 @@ Página Nosotros
       .conviertetelista ul li h2 {
         font-size: 25px;
         color: #89939E; }
+
+.sectionequipo {
+  margin-bottom: 3rem; }
+
+.owl-equipo .item .imgtrabajador img {
+  border-radius: 15px;
+  width: 100%; }
+.owl-equipo .item .nombretrabajador {
+  margin-top: 1.2rem;
+  color: #14666B; }
+  .owl-equipo .item .nombretrabajador h4 {
+    font-size: 20px; }
+.owl-equipo .item .cargotrabajador p {
+  font-size: 14px;
+  margin-top: 5px; }
 
 /*======================*/
 

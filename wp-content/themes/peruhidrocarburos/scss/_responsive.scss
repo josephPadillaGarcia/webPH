@@ -124,6 +124,10 @@ input.vs__search {
               }
         }
       }
+
+      .singleblog__content {
+        padding-left: 0 !important;
+      }
 }
 @media (max-width: 840px){
     .escoger-info{
@@ -167,6 +171,12 @@ input.vs__search {
 
       .sectioncontacto {
         margin: 3.5rem 0 !important;
+      }
+      .singleblog__content {
+        margin-top: 0.8rem !important;
+      }
+      .singleblog__imagenbanner figure img {
+        height: 350px !important;
       }
 }
 
