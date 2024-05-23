@@ -55,12 +55,14 @@ get_header();
                         </figure>
                     </div>
                     <div class="singleblog__fechaautor">
-                        <p><?php the_field('fecha_post'); ?></p>
-                        <p><?php the_field('autor_post'); ?></p>
+                        <p><i class="ri-calendar-2-line"></i><?php the_field('fecha_post'); ?></p>
+                        <p>Por:  <?php the_field('autor_post'); ?></p>
                     </div>
                     <div class="singleblog__informacion">
-                        <h3><?php the_title(); ?></h3>
-                        <?php the_field('contenido_post'); ?>
+                        <h2><?php the_title(); ?></h2>
+                        <divc class="blog-info">
+                            <?php the_field('contenido_post'); ?>
+                        </div>
                     </div>
                 </div>
             </div>

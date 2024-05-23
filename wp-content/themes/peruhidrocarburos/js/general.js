@@ -112,4 +112,27 @@ $(document).ready(function () {
         }
     });
 
+    $('.owl-imgproducto.owl-carousel').owlCarousel({
+        /*loop: true,
+        center: true,*/
+        margin: 15,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        navText: ["<i class='ri-arrow-left-s-line'></i>", "<i class='ri-arrow-right-s-line'></i>"],
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1
+            },
+            1049: {
+                items: 1
+            }
+        }
+    });
+
 });

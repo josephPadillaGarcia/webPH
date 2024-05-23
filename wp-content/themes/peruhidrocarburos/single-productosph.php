@@ -18,34 +18,55 @@ get_header();
     <p><?php the_field('contenido_post'); ?></p>
 </div-->
 
-<section class="sectionSingleBlog">
+<section class="sectionSingleproducto">
     <div class="container">
         <div class="grid-col">
-            <div class="grid-s-12 grid-m-3 grid-l-2">
-                <div class="asideBlog">
-                    <h3>Blog</h3>
-                    <?php
-                        // Obtener las categorías de los posts
-                        $categories = get_categories();
-
-                        // Comprobar si hay categorías
-                        if ($categories) {
-                            //echo '<pre>'.json_encode($categories).'</pre>';
-                            echo '<ul>';
-                            foreach ($categories as $category) {
-                                echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
-                                //echo '<pre>'.$category->name.'</pre>';
-                            }
-                            echo '</ul>';
-                        }
-                    ?>
+            <div class="grid-s-12 grid-m-5 grid-l-5">
+                <div class="singleblog__header">
+                    <p>Productos/GLP/Fisher/Reguladores/ Primera Etapa</p>
+                </div>
+                <div class="owl-imgproducto owl-carousel">
+                    <?php if (have_rows('lista_imagen_producto')) { ?>
+                        <?php while (have_rows('lista_imagen_producto')) {
+                            the_row(); ?>
+                            <div class="item">
+                                <?php $imagen = get_sub_field('item_img_producto'); ?>
+                                <img class="" src="<?php echo $imagen['url']; ?>" alt="<?php echo $imagen['title']; ?>">
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
                 </div>
             </div>
 
-            <div class="grid-s-12 grid-m-9 grid-l-10">
-                <div class="singleblog__content">
-                    <div class="singleblog__header">
-                        <p>Productos/GLP/Fisher/Reguladores/ Primera Etapa</p>
+            <div class="grid-s-12 grid-m-7 grid-l-7">
+                <div class="singleproducto__content">
+                    <div class="singleproducto__header">
+                        <h3><?php the_title(); ?></h3>
+                    </div>
+
+
+
+                    <div class="singleproducto__description">
+                        <?php the_field('descripcion_producto'); ?>
+                    </div>
+
+                    <div class="singleproducto__ficha">
+                        <a href="<?php the_field('archivo_pdf'); ?>">Ver ficha técnica</a>
+                    </div>
+                    
+                    <div class="singleproducto__elegiropcion">
+                        <select name="" id="selector" class="input-group__select" onchange="">
+                        <?php if (have_rows('lista_producto')) { ?>
+                            <?php while (have_rows('lista_producto')) {
+                                the_row(); ?>
+                                    <option value="<?php the_sub_field('opcion_de_producto'); ?>"><?php the_sub_field('opcion_de_producto'); ?></option>                               
+                                <?php } ?>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+                    <div class="singleproducto__asesor">
+                        <a href="https://api.whatsapp.com/send?phone=51<?php the_field('asesor'); ?>&text=Hola, quisiera saber sobre el producto" target="_blank"><i class="ri-whatsapp-line"></i><span>Hablar con un asesor</span></a>
                     </div>
                 </div>
             </div>

@@ -126,4 +126,21 @@
             </div>
         </header>
 
+        <div class="fixed-redes">
+            <ul>
+                <li>
+                    <a href="https://api.whatsapp.com/send?phone=51<?php the_field(''); ?>&text=Hola, quiero información"><i class="ri-whatsapp-line"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="ri-facebook-fill"></i></a>
+                </li>                
+                <li>
+                    <a href=""><i class="ri-instagram-fill"></i></a>
+                </li>               
+                <li>
+                    <a href=""><i class="ri-linkedin-fill"></i></a>
+                </li>
+            </ul>
+        </div>
+
     

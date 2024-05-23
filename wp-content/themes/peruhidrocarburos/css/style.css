@@ -1888,6 +1888,15 @@ img {
 .wpc-edit-filter-set {
   display: none !important; }
 
+.fixed-redes {
+  position: fixed;
+  background-color: #14666b;
+  padding: 0 10px;
+  color: #fff;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(50%); }
+
 /*=================*/
 /* Titulo General */
 .title-general {
@@ -2306,6 +2315,8 @@ Section - Blog
     gap: 0.5rem; }
     .singleblog__header a i {
       font-size: 24px; }
+  .singleblog__header .title-general {
+    margin-bottom: 0rem; }
 .singleblog__imagenbanner figure img {
   height: 420px;
   object-fit: cover;
@@ -2587,5 +2598,141 @@ Página Nosotros
   margin-top: 5px; }
 
 /*======================*/
+/*=======================
+Single Blog
+=======================*/
+.singleblog__fechaautor {
+  margin: 1.8rem 0;
+  display: flex;
+  gap: 1.5rem; }
+  .singleblog__fechaautor p {
+    padding: 15px 2.2rem;
+    background: #F5F7FA;
+    color: #ABBED1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.07); }
+    .singleblog__fechaautor p i {
+      margin-right: 10px;
+      font-size: 20px; }
+
+.singleblog__informacion h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 1.2rem; }
+.singleblog__informacion .blog-info h3 {
+  font-size: 20px;
+  font-weight: 600; }
+
+/*======================*/
+.taxonomia-cloud {
+  display: grid; }
+  .taxonomia-cloud a {
+    display: block;
+    border-top: 1px solid #F99716;
+    padding: 0.8rem 0;
+    font-size: 17px !important; }
+    .taxonomia-cloud a:hover {
+      color: #F99716; }
+
+.wpc-filters-widget-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; }
+
+.wpc-search-field {
+  height: 38px;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  font-size: 17px;
+  background: #f5f7fa;
+  width: 300px !important; }
+
+.wpc-search-clear-icon {
+  color: #fff !important; }
+
+.wpc-filter-header {
+  display: none; }
+
+.wpc-filters-section {
+  margin: 0 !important; }
+
+.singleblog__header select {
+  height: 38px;
+  background: #14666B;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  padding: 0 10px;
+  font-size: 17px; }
+
+.singleblog__header .wpc-filter-content select {
+  width: 205px !important;
+  margin-bottom: 0px; }
+
+.contentproducto {
+  padding: 1.5rem;
+  background: #F5F7FA;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
+  .contentproducto figure {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem; }
+    .contentproducto figure img {
+      width: 100%;
+      height: auto; }
+  .contentproducto .titleblog h4 {
+    margin: 0; }
+  .contentproducto .catproducto {
+    margin: 1rem 0; }
+  .contentproducto .enlaceblog {
+    display: flex;
+    justify-content: center; }
+    .contentproducto .enlaceblog a {
+      background: #F99716;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 15px; }
+
+.taxogas h2 {
+  color: #14666B; }
+  .taxogas h2 .taxonomy-label {
+    font-size: 20px;
+    padding: 0 1rem; }
+
+.sectionSingleproducto {
+  margin: 3.5rem 0; }
+
+.owl-imgproducto .item img {
+  width: 100%; }
+
+.owl-imgproducto .item {
+  border-radius: 20px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 5px; }
+
+.owl-imgproducto .owl-dots {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .owl-imgproducto .owl-dots .owl-dot {
+    margin: 0 5px;
+    padding: 0px;
+    border-radius: 100px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    transition: .3 all; }
+    .owl-imgproducto .owl-dots .owl-dot.active {
+      background-color: #14666B;
+      width: 15px;
+      height: 15px;
+      display: block; }
 
 /*# sourceMappingURL=style.css.map */

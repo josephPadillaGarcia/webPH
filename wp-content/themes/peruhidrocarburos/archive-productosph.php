@@ -10,7 +10,6 @@ get_header();
         <div class="grid-col">
             <div class="grid-s-12 grid-m-3 grid-l-2">
                 <div class="asideBlog">
-                    <h3>GNV</h3>
 
                     <?php
                         // Mostrar una nube de etiquetas para la taxonomía 'categoria'
@@ -30,7 +29,6 @@ get_header();
 
                     <div class="singleblog__header">
                         <?php dynamic_sidebar('filterproducts');?>
-                        <a href="<?php echo site_url(); ?>/blog"><i class="ri-arrow-left-s-line"></i><span>Volver</span></a>
                     </div>  
 
                     <div class="blog__lista">
@@ -38,39 +36,38 @@ get_header();
                         <?php if ( have_posts() ) : ?>
 
                             <?php
-                                    /* Start the Loop */
-                                    while ( have_posts() ) :
-                                        the_post();
-                                        ?>
-                            <div class="grid-s-12 grid-m-6 grid-l-6">
-                                <div class="">
-
-                                    <?php if (have_rows('lista_imagen_producto')) { ?>
-                                        <?php while (have_rows('lista_imagen_producto')) {
-                                            the_row(); ?>
-                                                <figure class="">
-                                                    <?php $imagen = get_sub_field('item_img_producto'); ?>
-                                                    <img class="" src="<?php echo $imagen['url']; ?>">
-                                                </figure>
-                                        <?php } ?>
-                                    <?php } ?>
-
-                                    <div class="">
+                                /* Start the Loop */
+                                while ( have_posts() ) :
+                                    the_post();
+                            ?>
+                                <div class="grid-s-12 grid-m-6 grid-l-4">
+                                    <div class="contentproducto">
+                                        <figure class="imgproducto">
+                                            <?php the_post_thumbnail(); ?>
+                                        </figure>
                                         <div class="titleblog">
                                             <h4><?php the_title(); ?></h4>
-                                        </div>                                        
-                                        <div class="">
-                                            <?php the_field('descripcion_producto'); ?>
                                         </div>
+                                        <?php
+                                            // ID del post del que deseas obtener la información
+                                            $post_id = get_the_ID(); // Reemplaza 123 con el ID de tu post
+
+                                            // Obtener los términos de la taxonomía 'tipo_producto' asociados al post
+                                            $tipoproducto_terms = wp_get_post_terms($post_id, 'tipo_producto');
+
+                                            // Verificar si se encontraron términos
+                                            if (!empty($tipoproducto_terms)) {
+                                                // Mostrar el término de la taxonomía 'tipoproducto'
+                                                echo '<div class="catproducto">';
+                                                echo '<p>Categoria: ' . $tipoproducto_terms[0]->name . '</p>'; // Suponiendo que solo hay un término
+                                                echo '</div>';
+                                            }
+                                        ?>
                                         <div class="enlaceblog">
-                                            <a href="<?php the_permalink(); ?>">Leer Más</a>
+                                            <a href="<?php the_permalink(); ?>">Ver Producto</a>
                                         </div>
                                     </div>
                                 </div>
-
-
-                            </div>
-
                             <?php endwhile;
 
 the_posts_navigation();
