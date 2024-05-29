@@ -131,15 +131,35 @@
                 <li>
                     <a href="https://api.whatsapp.com/send?phone=51<?php the_field(''); ?>&text=Hola, quiero información"><i class="ri-whatsapp-line"></i></a>
                 </li>
-                <li>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                </li>                
-                <li>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                </li>               
-                <li>
-                    <a href=""><i class="ri-linkedin-fill"></i></a>
-                </li>
+
+                <?php
+                    $args = array(
+                        'post_type' => 'informacion_general',
+                        'posts_per_page' => '0',
+                    );
+                ?>
+                <?php $the_query = new WP_Query($args); ?>
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <?php if (have_rows('item_redes')) { ?>
+                                <?php while (have_rows('item_redes')) {
+                                    the_row(); ?>
+                                        <li>
+                                            <a href="<?php the_sub_field('link_redes'); ?>"><i class="ri-<?php the_sub_field('icon_redes'); ?>-fill"></i></a>
+                                        </li>   
+                                    <?php } ?>
+                                <?php } ?>             
+                            <!--li>
+                                <a href=""><i class="ri-instagram-fill"></i></a>
+                            </li>               
+                            <li>
+                                <a href=""><i class="ri-linkedin-fill"></i></a>
+                            </li-->
+
+
+                        <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
+                <?php endif; ?>
             </ul>
         </div>
 
