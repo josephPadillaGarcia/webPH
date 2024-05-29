@@ -100,6 +100,9 @@
                     <h4>Contáctanos</h4>
                 </div>
 
+                <div class="form-footer">
+                    <?php echo do_shortcode( '[contact-form-7 id="a3c039e" title="Formulario Suscribete"]' ); ?>
+                </div>
             </div>
 
         </div>

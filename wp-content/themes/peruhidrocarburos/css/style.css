@@ -1891,11 +1891,17 @@ img {
 .fixed-redes {
   position: fixed;
   background-color: #14666b;
-  padding: 0 10px;
+  padding: 0 15px;
   color: #fff;
   right: 0;
   bottom: 50%;
-  transform: translateY(50%); }
+  transform: translateY(50%);
+  border-radius: 8px; }
+  .fixed-redes a {
+    padding: 1rem 0;
+    display: block; }
+    .fixed-redes a i {
+      font-size: 31px; }
 
 /*=================*/
 /* Titulo General */
@@ -2250,7 +2256,7 @@ Section - Politica
 Section - Blog
 =======================*/
 .section-blog {
-  margin-bottom: 3.2rem; }
+  margin-bottom: 5.2rem; }
 
 .title-general {
   margin-bottom: 1.8rem; }
@@ -2371,6 +2377,20 @@ Section - Blog
   .copy p {
     text-align: right;
     color: #fff; }
+
+.form-footer input {
+  width: 100%;
+  height: 42px;
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 17px;
+  background: #ffffff4f;
+  border: none;
+  color: #fff; }
+.form-footer .form__action {
+  margin: 0; }
+  .form-footer .form__action input[type="submit"] {
+    height: 40px; }
 
 /*======================*/
 /*=======================
@@ -2734,5 +2754,65 @@ Single Blog
       width: 15px;
       height: 15px;
       display: block; }
+
+/*=======================
+Single Producto
+=======================*/
+.contentinfo .singleblog__header p {
+  font-size: 18px; }
+
+.singleproducto__content {
+  display: grid;
+  gap: 0.8rem; }
+  .singleproducto__content p {
+    font-size: 18px; }
+.singleproducto__header h3 {
+  color: #89939E; }
+.singleproducto__description {
+  margin: 0.8rem 0; }
+.singleproducto__ficha a {
+  padding: 10px 25px;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #f99716;
+  color: #f99716; }
+  .singleproducto__ficha a:hover {
+    background-color: #F99716;
+    color: #ffffff; }
+  .singleproducto__ficha a i {
+    font-size: 25px;
+    margin-right: 8px; }
+.singleproducto__elegiropcion {
+  margin: 0.4rem 0; }
+  .singleproducto__elegiropcion select {
+    height: 40px;
+    width: 300px;
+    font-size: 17px;
+    padding: 0 15px;
+    border: 1px solid #14666b;
+    border-radius: 5px;
+    color: #14666b;
+    background: none;
+    margin-bottom: 12px; }
+.singleproducto__asesor a {
+  background: #14666b;
+  color: #ffffff;
+  padding: 10px 25px;
+  display: inline-block;
+  margin-bottom: 15px;
+  border-radius: 5px; }
+  .singleproducto__asesor a i {
+    font-size: 22px;
+    margin-right: 8px; }
+.singleproducto__enlacecotizarprod {
+  margin-top: .5rem; }
+  .singleproducto__enlacecotizarprod a {
+    background: #f99716;
+    padding: 10px 35px;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block; }
+
+/*=======================*/
 
 /*# sourceMappingURL=style.css.map */

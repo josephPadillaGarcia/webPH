@@ -16,33 +16,45 @@ get_header();
                     <h3 class="category-title"><?php echo $term->name; ?></h3>
 
                     <?php
-                        // ID del término de la taxonomía 'Color' que servirá como referencia
-                        $color_term_id = $term->term_id; // Reemplaza 123 con el ID del término de Color deseado
+                        // Obtener el término "Gas" en la taxonomía "Tipo de Energía"
+                        $term_gas = get_term_by('name', $term->name, 'tipo_gas_producto');
 
-                        // Obtener los términos de la taxonomía 'Categoría' relacionados con el término de 'Color'
-                        $categoria_terms = get_terms(array(
-                            'taxonomy' => 'marca_producto',
-                            'meta_query' => array(
-                                array(
-                                    'key' => 'color_relacionado', // Suponiendo que 'color_relacionado' es el nombre del campo personalizado que almacena el ID del término de 'Color'
-                                    'value' => $color_term_id,
-                                    'compare' => 'IN'
-                                )
-                            )
-                        ));
+                        if ($term_gas) {
+                            // Obtener los posts relacionados con el término "Gas"
+                            $related_posts = get_posts(array(
+                                'post_type' => 'productosph', // Reemplaza 'post' con el tipo de post que tienes
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'tipo_gas_producto',
+                                        'field' => 'term_id',
+                                        'terms' => $term_gas->term_id,
+                                    ),
+                                ),
+                            ));
 
-                        // Verificar si se encontraron términos en la taxonomía 'Categoría' relacionados con el término de 'Color'
-                        if (!empty($categoria_terms)) {
-                            echo '<h2>Categorías relacionadas con el color seleccionado:</h2>';
+                            $all_terms = array(); // Almacenar todos los términos de las otras taxonomías
+
+                            foreach ($related_posts as $post) {
+                                // Obtener los términos de otras taxonomías asociadas a cada post
+                                $post_terms = wp_get_post_terms($post->ID, array('marca_producto')); // Reemplaza 'otra_taxonomia_1' y 'otra_taxonomia_2' con los nombres de tus otras taxonomías
+
+                                // Almacenar los términos de cada post en un array
+                                foreach ($post_terms as $term) {
+                                    $all_terms[$term->term_id] = $term->name;
+                                }
+                            }
+
+                            // Mostrar los términos de las otras taxonomías y el término "Gas"
                             echo '<ul>';
-                            foreach ($categoria_terms as $term) {
-                                echo '<li>' . $term->name . '</li>';
+                            foreach ($all_terms as $term_id => $term_name) {
+                                echo '<li><a href="' . get_term_link($term_id) . '">' . $term_name . '</a></li>';
                             }
                             echo '</ul>';
                         } else {
-                            echo 'No hay categorías relacionadas con el color seleccionado.';
+                            echo 'No se encontró el término "Gas" en la taxonomía "Tipo de Energía".';
                         }
                     ?>
+
 
 
                      

@@ -122,11 +122,19 @@ img{
 .fixed-redes {
     position: fixed;
     background-color: #14666b;
-    padding: 0 10px;
+    padding: 0 15px;
     color: #fff;
     right: 0;
     bottom: 50%;
     transform: translateY(50%);
+    border-radius: 8px;
+    a {
+      padding: 1rem 0;
+      display: block;
+      i {
+        font-size: 31px;
+      }
+    }
   }
 /*=================*/
 
@@ -621,7 +629,7 @@ Section - Blog
 =======================*/
 
 .section-blog{
-    margin-bottom: 3.2rem;
+    margin-bottom: 5.2rem;
 }
 
 .title-general{
@@ -800,6 +808,26 @@ Section - Blog
         text-align: right;
         color: #fff;
       }
+  }
+
+
+  .form-footer {
+    input {
+      width: 100%;
+      height: 42px;
+      border-radius: 10px;
+      padding: 0 12px;
+      font-size: 17px;
+      background: #ffffff4f;
+      border: none;
+      color: #fff;
+    }
+    .form__action{
+      margin: 0;
+      input[type="submit"]{
+        height: 40px;
+      }
+    }
   }
 
 
@@ -1315,3 +1343,93 @@ Single Blog
           }
       }
   }
+
+/*=======================
+Single Producto
+=======================*/
+
+  .contentinfo {
+    .singleblog__header {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .singleproducto{
+    &__content {
+      display: grid;
+      gap: 0.8rem;
+      p{
+        font-size: 18px;
+      }
+    }
+    &__header {
+      h3 {
+        color: #89939E;
+      }
+    }
+    &__description {
+      margin: 0.8rem 0;
+    }
+    &__ficha {
+      a {
+        padding: 10px 25px;
+        display: inline-block;
+        border-radius: 5px;
+        border: 1px solid #f99716;
+        color: #f99716;
+        &:hover{
+          background-color: $color_2;
+          color: #ffffff;
+        }
+        i {
+          font-size: 25px;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &__elegiropcion {
+      margin: 0.4rem 0;
+      select {
+        height: 40px;
+        width: 300px;
+        font-size: 17px;
+        padding: 0 15px;
+        border: 1px solid #14666b;
+        border-radius: 5px;
+        color: #14666b;
+        background: none;
+        margin-bottom: 12px;
+      }
+    }
+
+    &__asesor {
+      a {
+        background: #14666b;
+        color: #ffffff;
+        padding: 10px 25px;
+        display: inline-block;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        i {
+          font-size: 22px;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &__enlacecotizarprod {
+      margin-top: .5rem;
+      a {
+        background: #f99716;
+        padding: 10px 35px;
+        border-radius: 5px;
+        color: #fff;
+        display: inline-block;
+      }
+    }
+  }
+
+  /*=======================*/

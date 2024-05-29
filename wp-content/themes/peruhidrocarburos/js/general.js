@@ -136,3 +136,18 @@ $(document).ready(function () {
     });
 
 });
+
+function ShowSelected()
+{
+    /* Para obtener el valor */
+    var cod = document.getElementById("selecprod").value;
+    var prodcode = document.getElementById('prodcode');
+    //alert(cod);
+
+    prodcode.innerHTML=cod;
+    
+    /* Para obtener el texto */
+    /*var combo = document.getElementById("producto");
+    var selected = combo.options[combo.selectedIndex].text;
+    alert(selected);*/
+}
