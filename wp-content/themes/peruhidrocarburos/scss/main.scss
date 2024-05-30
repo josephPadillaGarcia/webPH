@@ -151,6 +151,10 @@ img{
     }
 }
 
+.title-gas{
+   color: $color_2 !important;
+}
+
 /*==================*/
 /* ESTILOS DE MENU */
 
@@ -1435,3 +1439,7 @@ Single Producto
   }
 
   /*=======================*/
+
+  .wpc-filter-marca_producto {
+    display: none;
+  }

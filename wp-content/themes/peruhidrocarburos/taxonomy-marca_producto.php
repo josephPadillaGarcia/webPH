@@ -3,8 +3,6 @@
 template name: Blog
 */
 get_header();
-$termgas = get_queried_object();
-$namegas = $termgas->name;
 ?>
 
 
@@ -13,13 +11,13 @@ $namegas = $termgas->name;
         <div class="grid-col">
             <div class="grid-s-12 grid-m-3 grid-l-2">
                 <div class="asideBlog">
-                    <?php $termgas = get_queried_object();  ?>
+                    <?php $term = get_queried_object();  ?>
         
-                    <h3 class="category-title title-gas"><?php echo $namegas; ?></h3>
+                    <h3 class="category-title"><?php echo $term->name; ?></h3>
 
                     <?php
                         // Obtener el término "Gas" en la taxonomía "Tipo de Energía"
-                        $term_gas = get_term_by('name', $namegas, 'tipo_gas_producto');
+                        /*$term_gas = get_term_by('name', $term->name, 'tipo_gas_producto');
 
                         if ($term_gas) {
                             // Obtener los posts relacionados con el término "Gas"
@@ -49,13 +47,12 @@ $namegas = $termgas->name;
                             // Mostrar los términos de las otras taxonomías y el término "Gas"
                             echo '<ul>';
                             foreach ($all_terms as $term_id => $term_name) {
-                                //echo '<li><a href="' . get_term_link($term_id) . '">' . $term_name . '</a></li>';
-                                echo '<li><a href="'.site_url().'/tipo_gas_producto/'.$namegas.'/?_marca='.$term_name.'">' . $term_name . '</a></li>';
+                                echo '<li><a href="' . get_term_link($term_id) . '">' . $term_name . '</a></li>';
                             }
                             echo '</ul>';
                         } else {
                             echo 'No se encontró el término "Gas" en la taxonomía "Tipo de Energía".';
-                        }
+                        }*/
                     ?>
 
 
@@ -66,28 +63,11 @@ $namegas = $termgas->name;
 
             <div class="grid-s-12 grid-m-9 grid-l-10">
                 <div class="singleblog__content taxogas">
-
-
-                    <?php
-                    
-                        // Obtener la descripción de la taxonomía `marca` si está presente en la URL
-                        if (isset($_GET['_marca'])) {
-                            $marca_slug = sanitize_text_field($_GET['_marca']);
-                            $taxonomy = 'marca_producto';
-                            $marca_term = get_term_by('slug', $marca_slug, $taxonomy);
-
-                            if (!is_wp_error($marca_term)) {
-                                echo '<h2>Marca ' . esc_html($marca_term->name) . '</h2>';
-                                echo '<div class="term-description">' . esc_html($marca_term->description) . '</div>';
-                            }
-                        }else{
-                            
-                            $term = get_queried_object();
-        
-                            echo '<h2 class="category-title">'.$term->name.'<span class="taxonomy-label">('.$term->count.'productos registrados)</span></h2>';
-                        }
-
-                    ?>
+                    <?php $term = get_queried_object();  ?>
+    
+                    <h2 class="category-title"><?php echo $term->name; ?>
+                        <span class="taxonomy-label"><?php /*echo $term->taxonomy; */?> (<?php echo $term->count; ?> productos registrados)</span>
+                    </h2>
 
                     <div class="singleblog__header">
                         <?php dynamic_sidebar('filterproducts');?>

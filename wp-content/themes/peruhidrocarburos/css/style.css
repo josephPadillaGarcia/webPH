@@ -1913,6 +1913,9 @@ img {
   .title-general--left {
     text-align: left; }
 
+.title-gas {
+  color: #F99716 !important; }
+
 /*==================*/
 /* ESTILOS DE MENU */
 .header-nav .menu-item {
@@ -2816,5 +2819,7 @@ Single Producto
     display: inline-block; }
 
 /*=======================*/
+.wpc-filter-marca_producto {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
