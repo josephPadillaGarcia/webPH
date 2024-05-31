@@ -57,9 +57,6 @@ $namegas = $termgas->name;
                             echo 'No se encontró el término "Gas" en la taxonomía "Tipo de Energía".';
                         }
                     ?>
-
-
-
                      
                 </div>
             </div>
@@ -77,7 +74,7 @@ $namegas = $termgas->name;
                             $marca_term = get_term_by('slug', $marca_slug, $taxonomy);
 
                             if (!is_wp_error($marca_term)) {
-                                echo '<h2>Marca ' . esc_html($marca_term->name) . '</h2>';
+                                echo '<h2 class="term-title">Marca ' . esc_html($marca_term->name) . '</h2>';
                                 echo '<div class="term-description">' . esc_html($marca_term->description) . '</div>';
                             }
                         }else{

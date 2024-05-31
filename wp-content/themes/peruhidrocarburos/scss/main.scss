@@ -1309,6 +1309,14 @@ Single Blog
             font-size: 20px;
             padding: 0 1rem;
           }
+        &.term-title{
+          color: #89939E;
+          margin-bottom: .8rem;
+        }
+    }
+
+    .term-description{
+      margin-bottom: 1rem;
     }
   }
 
@@ -1341,7 +1349,7 @@ Single Blog
             display: block;
             transition: .3 all;
             &.active{
-                background-color: $color_1;
+                background-color: $color_2;
                 width: 15px;
                 height: 15px;
                 display: block;
@@ -1365,12 +1373,13 @@ Single Producto
   .singleproducto{
     &__content {
       display: grid;
-      gap: 0.8rem;
+      //gap: 0.8rem;
       p{
         font-size: 18px;
       }
     }
     &__header {
+      margin-bottom: 0.8rem;
       h3 {
         color: #89939E;
       }
@@ -1397,7 +1406,7 @@ Single Producto
     }
 
     &__elegiropcion {
-      margin: 0.4rem 0;
+      margin: 0.8rem 0 2rem;
       select {
         height: 40px;
         width: 300px;

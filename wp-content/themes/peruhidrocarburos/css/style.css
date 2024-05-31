@@ -2729,6 +2729,11 @@ Single Blog
   .taxogas h2 .taxonomy-label {
     font-size: 20px;
     padding: 0 1rem; }
+  .taxogas h2.term-title {
+    color: #89939E;
+    margin-bottom: .8rem; }
+.taxogas .term-description {
+  margin-bottom: 1rem; }
 
 .sectionSingleproducto {
   margin: 3.5rem 0; }
@@ -2755,7 +2760,7 @@ Single Blog
     display: block;
     transition: .3 all; }
     .owl-imgproducto .owl-dots .owl-dot.active {
-      background-color: #14666B;
+      background-color: #F99716;
       width: 15px;
       height: 15px;
       display: block; }
@@ -2767,12 +2772,13 @@ Single Producto
   font-size: 18px; }
 
 .singleproducto__content {
-  display: grid;
-  gap: 0.8rem; }
+  display: grid; }
   .singleproducto__content p {
     font-size: 18px; }
-.singleproducto__header h3 {
-  color: #89939E; }
+.singleproducto__header {
+  margin-bottom: 0.8rem; }
+  .singleproducto__header h3 {
+    color: #89939E; }
 .singleproducto__description {
   margin: 0.8rem 0; }
 .singleproducto__ficha a {
@@ -2788,7 +2794,7 @@ Single Producto
     font-size: 25px;
     margin-right: 8px; }
 .singleproducto__elegiropcion {
-  margin: 0.4rem 0; }
+  margin: 0.8rem 0 2rem; }
   .singleproducto__elegiropcion select {
     height: 40px;
     width: 300px;
