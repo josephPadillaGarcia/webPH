@@ -1449,6 +1449,22 @@ input.vs__search {
 .header-filter .grid-datos {
   display: grid; }
 
+@media (max-width: 1675px) {
+  .banner .banner__mensaje {
+    left: 12%  !important;
+    width: 35% !important; } }
+@media (max-width: 1364px) {
+  .banner .banner__mensaje {
+    left: 75px !important;
+    width: 40% !important; } }
+@media (max-width: 1045px) {
+  .banner .banner__mensaje {
+    left: 75px !important;
+    width: 50% !important; }
+
+  .owl-banner .item img {
+    height: 550px;
+    object-fit: cover; } }
 @media (max-width: 1150px) {
   .itempolitica {
     margin-bottom: 14rem; }
@@ -1542,7 +1558,12 @@ input.vs__search {
     .escoger-info p {
       max-width: none !important;
       width: 100%;
-      text-align: center; } }
+      text-align: center; }
+
+  .banner .banner__mensaje {
+    left: 0 !important;
+    width: 100% !important;
+    padding: 0 5rem; } }
 @media (max-width: 720px) {
   .empresavideo a {
     right: -18px !important;
@@ -1564,7 +1585,10 @@ input.vs__search {
     margin-top: 0.8rem !important; }
 
   .singleblog__imagenbanner figure img {
-    height: 350px !important; } }
+    height: 350px !important; }
+
+  .banner .banner__mensaje {
+    padding: 0 2.5rem !important; } }
 @media (max-width: 500px) {
   .formcontacto {
     padding: 3.5rem 2rem !important; } }
@@ -1974,8 +1998,17 @@ img {
 /*=============
 BANNER
 ==============*/
-.banner p {
-  color: #ffffff; }
+.banner {
+  position: relative; }
+  .banner p {
+    color: #ffffff; }
+  .banner .banner__mensaje {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    width: 25%; }
 
 .boton a {
   color: #fff;
@@ -1987,6 +2020,31 @@ BANNER
   background: #14666B; }
 .boton--naranja a {
   background-color: #F99716; }
+
+.owl-banner .item img {
+  width: 100%;
+  display: block; }
+.owl-banner .owl-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 25px;
+  right: 50%;
+  transform: translateX(50%); }
+  .owl-banner .owl-dots .owl-dot {
+    margin: 0 5px;
+    padding: 0px;
+    border-radius: 100px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    transition: .3 all; }
+    .owl-banner .owl-dots .owl-dot.active {
+      background-color: #F99716;
+      width: 15px;
+      height: 15px;
+      display: block; }
 
 /*==================*/
 /*=======================
@@ -2254,6 +2312,8 @@ Section - Politica
     color: #fff;
     border-radius: 4px;
     display: inline-block; }
+  .info-comprar ol li {
+    padding: 5px 0; }
 
 /*=======================*/
 /*=======================
@@ -2659,20 +2719,39 @@ Single Blog
     .taxonomia-cloud a:hover {
       color: #F99716; }
 
+#wpc_filters_widget-2 {
+  width: 100%; }
+
 .wpc-filters-widget-wrapper {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   margin-top: 2rem;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between; }
 
 .wpc-search-field {
-  height: 38px;
+  height: 45px;
   border: 1px solid #e6e6e6;
   border-radius: 6px;
   font-size: 17px;
   background: #f5f7fa;
-  width: 300px !important; }
+  width: 350px !important;
+  padding: 0 0 0 20px !important; }
+
+.wpc-search-icon::before {
+  background-image: url("http://localhost/webph/wp-content/uploads/2024/05/Search.png") !important;
+  background-size: 20px !important;
+  width: 30px !important;
+  height: 40px !important;
+  background-position: center !important;
+  position: absolute !important;
+  right: -5px !important; }
+
+.wpc-search-icon {
+  right: 20px !important;
+  left: initial !important; }
 
 .wpc-search-clear-icon {
   color: #fff !important; }
@@ -2681,7 +2760,9 @@ Single Blog
   display: none; }
 
 .wpc-filters-section {
-  margin: 0 !important; }
+  margin: 0 !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 8px; }
 
 .singleblog__header select {
   height: 38px;
@@ -2826,6 +2907,15 @@ Single Producto
 
 /*=======================*/
 .wpc-filter-marca_producto {
+  display: none; }
+
+.sectionlistaservicios {
+  margin-bottom: 2.8rem; }
+
+.editor h2 {
+  color: #14666B; }
+
+.wpc-posts-found {
   display: none; }
 
 /*# sourceMappingURL=style.css.map */

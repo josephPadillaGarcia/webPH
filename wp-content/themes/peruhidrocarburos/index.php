@@ -5,17 +5,24 @@ template name: Inicio
 get_header();
 ?>
 
-<?php $imagenbanner = get_field('banner_home'); ?>
-<section class="banner " style="background-image: url(<?php echo $imagenbanner['url']; ?>);">
-    <div class="container">
-        <div class="banner__contenido banner__contenido--posicion">
-            <div class="banner__bloque">
-                <div class="banner__mensaje boton boton--naranja">
-                    <?php the_field('contenido_banner'); ?>
+<section class="banner" style="">
+
+    <div class="owl-banner owl-carousel">
+        <?php if (have_rows('banner_home')) { ?>
+            <?php while (have_rows('banner_home')) {
+                the_row(); ?>
+                <div class="item">
+                    <?php $imagen = get_sub_field('item_img_banner'); ?>
+                    <img class="" src="<?php echo $imagen['url']; ?>" alt="<?php echo $imagen['title']; ?>">
                 </div>
-            </div>
-        </div>
+            <?php } ?>
+        <?php } ?>
     </div>
+
+    <div class="banner__mensaje boton boton--naranja absolute">
+        <?php the_field('contenido_banner'); ?>
+    </div>
+
 </section>
 
 <section class="section-servicios">    

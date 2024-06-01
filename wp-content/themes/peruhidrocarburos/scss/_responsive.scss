@@ -16,6 +16,32 @@ input.vs__search {
     display: grid;
 }
 
+@media (max-width: 1675px){
+  .banner .banner__mensaje {
+    left: 12%  !important;
+    width: 35% !important;
+  }
+}
+
+@media (max-width: 1364px){
+  .banner .banner__mensaje {
+    left: 75px !important;
+    width: 40% !important;
+  }
+}
+
+@media (max-width: 1045px){
+  .banner .banner__mensaje {
+    left: 75px !important;
+    width: 50% !important;
+  }
+
+  .owl-banner .item img {
+    height: 550px;
+    object-fit: cover;
+  }
+}
+
 @media (max-width: 1150px){
     .itempolitica {
         margin-bottom: 14rem;
@@ -150,6 +176,12 @@ input.vs__search {
             text-align: center;
         }
     }
+
+    .banner .banner__mensaje {
+      left: 0 !important;
+      width: 100% !important;
+      padding: 0 5rem;
+    }
 }
 @media (max-width: 720px){
     .empresavideo a {
@@ -177,6 +209,10 @@ input.vs__search {
       }
       .singleblog__imagenbanner figure img {
         height: 350px !important;
+      }
+
+      .banner .banner__mensaje {
+        padding: 0 2.5rem !important;
       }
 }
 

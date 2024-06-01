@@ -250,8 +250,18 @@ BANNER
 ==============*/
 
 .banner{
+  position: relative;
     p{
         color: #ffffff;
+    }
+
+    .banner__mensaje{
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10%;
+      width: 25%;
     }
 }
 
@@ -273,6 +283,40 @@ BANNER
             background-color: $color_2;
         }
     }
+}
+
+.owl-banner{
+  .item{
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 25px;
+    right: 50%;
+    transform: translateX(50%);
+    .owl-dot {
+        margin: 0 5px;
+        padding: 0px;
+        border-radius: 100px;
+        width: 12px;
+        height: 12px;
+        display: block;
+        transition: .3 all;
+        &.active{
+            background-color: $color_2;
+            width: 15px;
+            height: 15px;
+            display: block;
+        }
+      }
+  }
 }
 
 /*==================*/
@@ -624,6 +668,10 @@ Section - Politica
         color: #fff;
         border-radius: 4px;
         display: inline-block;
+      }
+
+      ol li {
+        padding: 5px 0;
       }
   }
 
@@ -1215,21 +1263,43 @@ Single Blog
       }
   } 
 
+  #wpc_filters_widget-2 {
+    width: 100%;
+  }
+
   .wpc-filters-widget-wrapper {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     margin-top: 2rem;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .wpc-search-field {
-    height: 38px;
+    height: 45px;
     border: 1px solid #e6e6e6;
     border-radius: 6px;
     font-size: 17px;
     background: #f5f7fa;
-    width: 300px !important;
+    width: 350px !important;
+    padding: 0 0 0 20px !important;
+  }
+
+  .wpc-search-icon::before {
+    background-image: url("http://localhost/webph/wp-content/uploads/2024/05/Search.png") !important;
+    background-size: 20px !important;
+    width: 30px !important;
+    height: 40px !important;
+    background-position: center !important;
+    position: absolute !important;
+    right: -5px !important;
+  }
+
+  .wpc-search-icon {
+    right: 20px !important;
+    left: initial !important;
   }
 
   .wpc-search-clear-icon {
@@ -1242,6 +1312,8 @@ Single Blog
 
   .wpc-filters-section{
     margin: 0 !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 8px;
   }
 
   .singleblog__header {
@@ -1450,5 +1522,19 @@ Single Producto
   /*=======================*/
 
   .wpc-filter-marca_producto {
+    display: none;
+  }
+
+  .sectionlistaservicios {
+    margin-bottom: 2.8rem;
+  }
+
+  .editor{
+    h2{
+      color: $color_1;
+    }
+  }
+
+  .wpc-posts-found {
     display: none;
   }

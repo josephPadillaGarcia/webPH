@@ -43,6 +43,27 @@ $(document).ready(function () {
 */
 $(document).ready(function () {
 
+    $('.owl-banner.owl-carousel').owlCarousel({
+        loop: false,
+        center: false,
+        margin: 0,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        navText: ["<i class='ri-arrow-left-s-line'></i>", "<i class='ri-arrow-right-s-line'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1049: {
+                items: 1
+            }
+        }
+    });
+
     $('.owl-marcas.owl-carousel').owlCarousel({
         loop: false,
         center: false,

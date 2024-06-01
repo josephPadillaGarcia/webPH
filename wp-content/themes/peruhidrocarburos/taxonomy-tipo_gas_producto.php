@@ -81,7 +81,7 @@ $namegas = $termgas->name;
                             
                             $term = get_queried_object();
         
-                            echo '<h2 class="category-title">'.$term->name.'<span class="taxonomy-label">('.$term->count.'productos registrados)</span></h2>';
+                            echo '<h2 class="category-title">'.$term->name.'<span class="taxonomy-label">('.$term->count.' productos registrados)</span></h2>';
                         }
 
                     ?>
