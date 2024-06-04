@@ -22,6 +22,8 @@ get_header();
                 the_row(); ?>
                     <div class="grid-s-12 grid-m-6 grid-l-4">
                         <div class="infolistaph infolistaph__<?php echo get_row_index(); ?>">
+                            <?php $imagen = get_sub_field('icon_ph'); ?>
+                            <img class="" src="<?php echo $imagen['url']; ?>" alt="<?php echo $imagen['title']; ?>">
                             <?php the_sub_field('info_ph'); ?>
                         </div>
                     </div>

@@ -24,6 +24,7 @@ function lista_estilos(){
     wp_enqueue_style('styleph', get_template_directory_uri().'/css/styleph.css');
     wp_enqueue_style('style', get_template_directory_uri().'/css/style.css');
     wp_enqueue_style('remixicon', get_template_directory_uri().'/css/remixicon.css');
+    wp_enqueue_style('animate', get_template_directory_uri().'/css/animate.css');
     //wp_enqueue_style('fancy', get_template_directory_uri().'/css/fancy.min.css');
 }
 

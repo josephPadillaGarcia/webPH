@@ -2765,7 +2765,7 @@ Single Blog
   border-radius: 8px; }
 
 .singleblog__header select {
-  height: 38px;
+  height: 45px;
   background: #14666B;
   border-radius: 8px;
   color: #fff;
@@ -2774,7 +2774,7 @@ Single Blog
   font-size: 17px; }
 
 .singleblog__header .wpc-filter-content select {
-  width: 205px !important;
+  width: 230px !important;
   margin-bottom: 0px; }
 
 .contentproducto {

@@ -26,7 +26,7 @@ get_header();
 </section>
 
 <section class="section-servicios">    
-    <div class="container"> 
+    <div class="container wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1s"> 
         <div class="title-general">
             <?php the_field('titulo_nuestros_servicios'); ?>
         </div>
@@ -71,7 +71,7 @@ get_header();
 </section>
 
 <section class="section-marcas">
-    <div class="container">
+    <div class="container wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1s">
         <div class="title-general">
             <?php the_field('titulo_marcas'); ?>
         </div>
@@ -92,7 +92,7 @@ get_header();
 </section>
 
 <section class="section-escogernos">
-    <div class="container">
+    <div class="container wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1s">
         <div class="escoger-info">
             <?php the_field('titulo_escogernos'); ?>
         </div>
