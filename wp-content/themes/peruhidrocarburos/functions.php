@@ -62,6 +62,13 @@ function agregar_scripts_en_footer() {
 
 
     // Registra el archivo JavaScript
+    wp_register_script('counter_script', get_template_directory_uri() . '/js/jquery.counterup.min.js', array('jquery'), null, true); // El último parámetro es true para cargar el script en el footer
+
+    // Enqueue the registered script
+    wp_enqueue_script('counter_script');
+
+
+    // Registra el archivo JavaScript
     //wp_register_script('fancybox_script', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array('jquery'), null, true); // El último parámetro es true para cargar el script en el footer
 
     // Enqueue the registered script

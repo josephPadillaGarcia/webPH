@@ -172,3 +172,16 @@ function ShowSelected()
     var selected = combo.options[combo.selectedIndex].text;
     alert(selected);*/
 }
+
+/* ====================================================== */
+
+// CONTADOR
+
+$(document).ready(function () {
+
+    $('.counter').counterUp({
+        delay: 30,
+        time: 4000
+    });
+
+});

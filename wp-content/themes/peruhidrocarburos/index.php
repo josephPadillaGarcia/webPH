@@ -92,15 +92,15 @@ get_header();
 </section>
 
 <section class="section-escogernos">
-    <div class="container wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1s">
-        <div class="escoger-info">
+    <div class="container ">
+        <div class="escoger-info wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1s">
             <?php the_field('titulo_escogernos'); ?>
         </div>
 
         <div class="grid-col">
             <div class="grid-s-12 grid-m-4 grid-l-4">
             <?php $imagenempleado = get_field('imagen_fondo_empleado'); ?>
-                <div class="moreempleados" style="background-image: url(<?php echo $imagenempleado['url']; ?>);">
+                <div class="moreempleados wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1s" style="background-image: url(<?php echo $imagenempleado['url']; ?>);">
                     <div class="contentMoreEmpleados">
                         <div class="moreempleados__info">
                             <?php the_field('contenido_empleado'); ?>
@@ -122,7 +122,7 @@ get_header();
 
             <div class="grid-s-12 grid-m-8 grid-l-8">
                 <?php $imagenvideo = get_field('imagen_video'); ?>
-                <div class="empresavideo" style="background-image: url(<?php echo $imagenvideo['url']; ?>);">
+                <div class="empresavideo wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1s" style="background-image: url(<?php echo $imagenvideo['url']; ?>);">
                     <h3><?php the_field('texto_video'); ?></h3>
                     <a data-fancybox href="<?php the_field('video'); ?>"><i class="ri-play-fill"></i></a>
                 </div>
@@ -135,10 +135,10 @@ get_header();
 <section class="section-somosph">
     <div class="container">
         <div class="content-somosph">
-            <div class="title-somoph">
+            <div class="title-somoph wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1s">
                 <?php the_field('titulo_somos_ph'); ?>
             </div>
-            <div class="caracteristicas-ph">
+            <div class="caracteristicas-ph wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1s">
                 <?php if (have_rows('caracteristicas_ph')) { ?>
                     <?php while (have_rows('caracteristicas_ph')) {
                     the_row(); ?>
@@ -160,7 +160,7 @@ get_header();
 </section>
 
 <section class="section-politica">
-    <div class="container">        
+    <div class="container wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1s">        
         <div class="title-general">
             <?php the_field('titulo_politica'); ?>
         </div>
@@ -193,14 +193,14 @@ get_header();
 </section>
 
 <section class="section-comprar">
-    <div class="container">
+    <div class="container ">
         <div class="grid-col">
             <div class="grid-s-12 grid-m-6 grid-l-6">
                 <?php $imagen = get_field('img_comprar'); ?>
-                <img class="img-comprar" src="<?php echo $imagen['url']; ?>" alt="<?php echo $imagen['title']; ?>">
+                <img class="img-comprar wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1s" src="<?php echo $imagen['url']; ?>" alt="<?php echo $imagen['title']; ?>">
             </div>
             <div class="grid-s-12 grid-m-6 grid-l-6">
-                <div class="info-comprar">
+                <div class="info-comprar wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1s">
                     <?php the_field('contenido_comprar'); ?>
                 </div>
             </div>
@@ -209,7 +209,7 @@ get_header();
 </section>
 
 <section class="section-blog">
-    <div class="container">
+    <div class="container wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1s">
         <div class="title-general title-general--left">
             <?php the_field('titulo_blog'); ?>
         </div>
